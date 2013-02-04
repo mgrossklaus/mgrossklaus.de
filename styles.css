@@ -1,0 +1,210 @@
+h1,h2,h3,h4{font-weight:normal}*,html,body{margin:0;padding:0;border:0;line-height:100%;font-style:normal;font-size:100%}a:focus,input:focus,textarea:focus{outline:none}ul,ol{list-style:none}header,nav,footer,section,article{display:block}hr{display:none}strong{font-weight:bold;}em{font-style:italic;}
+body {
+	font: .75em/1.5em 'Droid Sans', Helvetica, Arial, Verdana, sans-serif;
+	color: #999;
+}
+
+::-moz-selection {
+	background: #ffe701;
+	color: #fff;
+}
+
+#container {
+	width: 38.2%;
+	float: right;
+	position: relative;
+	z-index: 1;
+	background: #222;
+	background: rgba(0,0,0,.8);
+	padding: 4em 4em 3em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	min-width: 28em;
+}
+
+* {
+	line-height: 1.75em;
+	text-shadow: 1px 1px 1px #000;
+}
+a {
+	color: #ccc;
+	-webkit-transition: color .3s ease;
+	-moz-transition: color .3s ease;
+	-ms-transition: color .3s ease;
+	-o-transition: color .3s ease;
+	transition: color .3s ease;
+}
+a:hover {
+	color: #ffe701;
+}
+
+h1, h2, h3, h4 {
+	font-weight: bold;
+	color: #fff;
+}
+h1 {
+	font: 3.5em 'Nothing you could do', cursive;
+	letter-spacing: -.075em;
+	line-height: 1em;
+	margin: .25em 0 1em;
+	text-align: center;
+}
+h2, h3 {
+	margin: .5em 0;
+}
+h2 {
+	font: 2em 'Nothing you could do', cursive;
+	text-align: center;
+	margin-bottom: 1.5em;
+}
+h3 {
+	font-size: 1.25em;
+}
+h4 small {
+	font-weight: normal;
+	font-size: .8em;
+	color: #ffe701;
+}
+h4 span {
+	font-weight: normal;
+}
+p, ul, ol, address {
+	margin-bottom: 1.5em;
+}
+p:last-child {
+	margin-bottom: 0;
+}
+ul li {
+	list-style: square;
+	margin: 0 0 1em 1.5em;
+}
+
+.keywords {
+	overflow: hidden;
+}
+.keywords li {
+	float: left;
+	list-style: none;
+	margin: 0;
+	color: #fff;
+}
+.keywords li:after {
+	content: '/';
+	display: inline;
+	padding: 0 .5em;
+	color: #999;
+}
+.keywords li:last-child:after {
+	content: none;
+	display: none;
+	visibility: hidden;
+	padding: 0;
+}
+
+#contact > div {
+	width: 58%;
+	float: left;
+}
+#contact > div#offline {
+	width: 38%;
+}
+#contact > p {
+	clear: both;
+}
+#contact li {
+	margin-bottom: 0;
+}
+
+section {
+	border-top: 1px dotted #666;
+	border-top-color: rgba(255,255,255,.25);
+	padding: 4em 0 0;
+	margin: 5em 0 0;
+}
+
+small {
+	font-size: .9em;
+	color: #666;
+	margin-bottom: 0;
+}
+
+#bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+#bg img {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	display: block;
+}
+
+@media (max-height: 640px) {
+	#bg img {
+		bottom: auto;
+		top: -25%;
+	}
+}
+
+@media (max-width: 48em) {
+	#bg {
+		position: static;
+	}
+	#bg img {
+		position: static;
+		width: 100%;
+		height: auto;
+		min-width: 0;
+		min-height: 0;
+	}
+	#container {
+		position: relative;
+		top: auto;
+		left: auto;
+		right: auto;
+		bottom: auto;
+		width: auto;
+		margin: 0;
+		padding: 3em 3em 2em;
+		background: #151515;
+	}
+	h1 {
+		font-size: 2.5em;
+	}
+	.projects {
+		overflow: hidden;
+	}
+	.projects li {
+		width: 48%;
+		float: left;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.projects li:nth-child(even) {
+		margin-left: 0;
+	}
+}
+
+@media (max-width: 40em) {
+	#container {
+		padding: 2em;
+	}
+	.projects li {
+		width: auto;
+		float: none;
+	}
+	.projects li:nth-child(even) {
+		margin-left: 1.5em;
+	}
+}

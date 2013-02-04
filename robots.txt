@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /index_src.html
+Disallow: /backup/
+Allow: /
