@@ -8,8 +8,12 @@ body {
 	background: #ffe701;
 	color: #fff;
 }
+::selection {
+	background: #ffe701;
+	color: #fff;
+}
 
-#container {
+.container {
 	width: 38.2%;
 	float: right;
 	position: relative;
@@ -25,7 +29,16 @@ body {
 	min-width: 28em;
 }
 
-* {
+p,
+li,
+a,
+h1,
+h2,
+h3,
+h4,
+address,
+span,
+small {
 	line-height: 1.75em;
 	text-shadow: 1px 1px 1px #000;
 }
@@ -63,12 +76,12 @@ h2 {
 h3 {
 	font-size: 1.25em;
 }
-h4 small {
+h4 > small {
 	font-weight: normal;
 	font-size: .8em;
 	color: #ffe701;
 }
-h4 span {
+h4 > span {
 	font-weight: normal;
 }
 p, ul, ol, address {
@@ -77,7 +90,7 @@ p, ul, ol, address {
 p:last-child {
 	margin-bottom: 0;
 }
-ul li {
+ul > li {
 	list-style: square;
 	margin: 0 0 1em 1.5em;
 }
@@ -85,36 +98,36 @@ ul li {
 .keywords {
 	overflow: hidden;
 }
-.keywords li {
+.keyword {
 	float: left;
 	list-style: none;
 	margin: 0;
 	color: #fff;
 }
-.keywords li:after {
+.keyword:after {
 	content: '/';
 	display: inline;
 	padding: 0 .5em;
 	color: #999;
 }
-.keywords li:last-child:after {
+.keyword:last-child:after {
 	content: none;
 	display: none;
 	visibility: hidden;
 	padding: 0;
 }
 
-#contact > div {
+.contact_type {
 	width: 58%;
 	float: left;
 }
-#contact > div#offline {
+.contact_type-offline {
 	width: 38%;
 }
-#contact > p {
+.law {
 	clear: both;
 }
-#contact li {
+.contact .keyword {
 	margin-bottom: 0;
 }
 
@@ -138,7 +151,7 @@ small {
 	right: 0;
 	bottom: 0;
 }
-#bg img {
+#bg > img {
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -148,7 +161,7 @@ small {
 }
 
 @media (max-height: 640px) {
-	#bg img {
+	#bg > img {
 		bottom: auto;
 		top: -25%;
 	}
@@ -158,14 +171,14 @@ small {
 	#bg {
 		position: static;
 	}
-	#bg img {
+	#bg > img {
 		position: static;
 		width: 100%;
 		height: auto;
 		min-width: 0;
 		min-height: 0;
 	}
-	#container {
+	.container {
 		position: relative;
 		top: auto;
 		left: auto;
@@ -182,7 +195,7 @@ small {
 	.projects {
 		overflow: hidden;
 	}
-	.projects li {
+	.project {
 		width: 48%;
 		float: left;
 		-webkit-box-sizing: border-box;
@@ -191,20 +204,20 @@ small {
 		-o-box-sizing: border-box;
 		box-sizing: border-box;
 	}
-	.projects li:nth-child(even) {
+	.project:nth-child(even) {
 		margin-left: 0;
 	}
 }
 
 @media (max-width: 40em) {
-	#container {
+	.container {
 		padding: 2em;
 	}
-	.projects li {
+	.project {
 		width: auto;
 		float: none;
 	}
-	.projects li:nth-child(even) {
+	.project:nth-child(even) {
 		margin-left: 1.5em;
 	}
 }
