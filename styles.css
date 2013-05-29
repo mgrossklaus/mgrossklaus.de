@@ -184,8 +184,11 @@ strong {
 	margin-bottom: 2.5em;
 }
 .project h4 {
-	float: left;
+	display: inline-block;
 	padding-right: .6em;
+}
+.project p {
+	display: inline-block;
 }
 
 section {
