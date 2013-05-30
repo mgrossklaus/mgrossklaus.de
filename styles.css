@@ -63,12 +63,11 @@ body {
 
 .container {
 	width: 38.2%;
-	float: right;
 	position: relative;
 	z-index: 1;
 	background: #222;
 	background: rgba(0,0,0,.8);
-	padding: 4em 4em 3em;
+	padding: 4em;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
@@ -213,7 +212,7 @@ small {
 }
 #bg > img {
 	position: absolute;
-	right: 0;
+	left: 0;
 	bottom: 0;
 	min-width: 100%;
 	min-height: 100%;
@@ -246,7 +245,7 @@ small {
 		bottom: auto;
 		width: auto;
 		margin: 0;
-		padding: 3em 3em 2em;
+		padding: 3em 3em 4em;
 		background: #151515;
 	}
 	h1 {
@@ -270,9 +269,6 @@ small {
 }
 
 @media (max-width: 40em) {
-	.container {
-		padding: 2em;
-	}
 	.project {
 		width: auto;
 		float: none;
