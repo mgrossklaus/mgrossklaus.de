@@ -219,13 +219,6 @@ small {
 	display: block;
 }
 
-@media (max-height: 640px) {
-	#bg > img {
-		bottom: auto;
-		top: -25%;
-	}
-}
-
 @media (max-width: 48em) {
 	#bg {
 		position: static;
