@@ -46,20 +46,31 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 .bg {
-	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	overflow: hidden;
-	background: #111 url(mg.jpg) no-repeat center;
+	background: #111 url(mg.jpg) no-repeat;
+}
+.no-touch .bg {
+	position: fixed;
 	-webkit-background-size: cover; 
 	-moz-background-size: cover; 
 	-ms-background-size: cover;
 	-o-background-size: cover; 
 	background-size: cover;
+	background-position: center;
+}
+.touch .bg {
+	position: absolute;
+	-webkit-background-size: 100% auto; 
+	-moz-background-size: 100% auto; 
+	-ms-background-size: 100% auto; 
+	-o-background-size: 100% auto; 
+	background-size: 100% auto;
+	background-position: top;
 }
 
 html,
