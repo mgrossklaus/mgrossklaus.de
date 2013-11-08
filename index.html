@@ -16,6 +16,9 @@
 </head>
 <body itemscope itemtype="http://data-vocabulary.org/Person" id="mgrossklaus-de">
 	
+	<div class="bg">
+
+	</div>
 	<h1 id="name" class="name" itemprop="name">Michael Großklaus</h1>
 
 	<div class="container">
@@ -216,8 +219,6 @@
 							};
 		}());
 
-		mgBody.className = 'loaded';
-
 		if(!Modernizr.touch) {
 
 			function setOpac(scrollY) {
@@ -247,6 +248,12 @@
 				setOpac(scrollY);
 			})();
 		}
+
+		var bgImg = new Image();
+		bgImg.onload = function(){
+			mgBody.className = 'loaded';
+		};
+		bgImg.src = 'mg.jpg';
 	</script>
 </body>
 </html>

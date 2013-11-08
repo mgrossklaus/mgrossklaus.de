@@ -47,6 +47,21 @@ table {
 	border-spacing: 0;
 }
 
+.bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	background: #111 url(mg.jpg) no-repeat center;
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-ms-background-size: cover;
+	-o-background-size: cover; 
+	background-size: cover;
+}
+
 html,
 body {
 	min-height: 100%;
@@ -55,7 +70,7 @@ body {
 	font: 400 .925em/1.5em 'Raleway', Helvetica, Arial, Verdana, sans-serif;
 	color: #aaa;
 	opacity: 0;
-	background: #111 url(mg.jpg) no-repeat center;
+	background: #111;
 }
 .loaded {
 	opacity: 1;
@@ -64,19 +79,6 @@ body {
 	-ms-transition: 2s opacity ease;
 	-o-transition: 2s opacity ease;
 	transition: 2s opacity ease;
-}
-.no-touch body {
-	-webkit-background-size: cover; 
-	-moz-background-size: cover; 
-	-ms-background-size: cover;
-	-o-background-size: cover; 
-	background-size: cover;
-	background-attachment: fixed;
-}
-.touch body {
-	-webkit-background-size: 100% auto;
-	background-size: 100% auto;
-	background-position: top;
 }
 
 ::-moz-selection {
