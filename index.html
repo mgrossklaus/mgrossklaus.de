@@ -14,14 +14,16 @@
 	<link rel="stylesheet" href="styles.css">
 	<link rel="canonical" href="http://www.mgrossklaus.de/">
 </head>
-<body itemscope itemtype="http://data-vocabulary.org/Person" id="mgrossklaus-de">
-	
-	<div class="bg">
+<body class="loading" itemscope itemtype="http://data-vocabulary.org/Person" id="mgrossklaus-de">
 
-	</div>
-	<h1 id="name" class="name" itemprop="name">Michael Großklaus</h1>
+	<div class="container" id="container">
 
-	<div class="container">
+		<div class="mg" id="mg">
+			<div class="bg"></div>
+			<h1 id="name" class="name" itemprop="name">Michael Großklaus</h1>
+		</div>
+
+		<div class="content">
 
 		<h2 class="subtitle">freelancer for html, css &amp; javascript</h2>
 
@@ -204,13 +206,15 @@
 				<p>mgrossklaus.de is hosted on <a href="http://pages.github.com" target="_blank">pages.github.com</a></p>
 			</section>
 		</div>
+	</div>
 	<script src="modernizr.js"></script>
 	<script>
 		window.onload = function() {
 
-			var mgName	= document.getElementById('name'),
-					mgBody	= document.getElementById('mgrossklaus-de'),
-					scrollY	= window.pageYOffset;
+			var mg					= document.getElementById('mg'),
+					mgName			= document.getElementById('name'),
+					mgBody			= document.getElementById('mgrossklaus-de'),
+					scrollY			= window.pageYOffset;
 
 			window.requestAnimFrame = (function(){
 				return  window.requestAnimationFrame       ||
@@ -226,7 +230,7 @@
 				function updateLayout(scrollY) {
 					if(scrollY <= 500) {
 						opac					= 1 - scrollY / 250;
-						gray					= scrollY / 7.5,
+						gray					= scrollY / 75,
 						translateY		= scrollY / 1.5 * -1;
 						translateYstr	= 'translateY(' + translateY + '%)';
 					}
@@ -234,6 +238,7 @@
 						opac					= 0;
 						gray					= 75;
 						translateYstr	= 'translateY(100%)';
+						mgBody.classList.remove('loading');
 					}
 
 					mgName.style.opacity					= opac;
@@ -254,11 +259,27 @@
 				})();
 			}
 
-			var bgImg = new Image();
-			bgImg.onload = function(){
-				mgBody.className = 'loaded';
-			};
+			function loadHandler() {
+				if(loaded) {
+            return;
+        }
+        loaded = true;
+
+        setTimeout(function() {
+					mgBody.className = '';
+				}, 2000);
+				mg.className += ' mg--loaded';
+			}
+
+			var bgImg		= new Image(),
+					loaded	= false;
+
+			bgImg.onload = loadHandler;
 			bgImg.src = 'mg.jpg';
+
+			if (bgImg.complete) {
+        loadHandler();
+    	}
 		}
 	</script>
 </body>
