@@ -1,6 +1,6 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+	 v2.0 | 20110126
+	 License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -47,9 +47,36 @@ table {
 	border-spacing: 0;
 }
 
+html,
 body {
-	font: .75em/1.5em 'Droid Sans', Helvetica, Arial, Verdana, sans-serif;
-	color: #999;
+	min-height: 100%;
+}
+body {
+	font: 400 .925em/1.5em 'Raleway', Helvetica, Arial, Verdana, sans-serif;
+	color: #aaa;
+	opacity: 0;
+	background: #111 url(mg.jpg) no-repeat center;
+}
+.loaded {
+	opacity: 1;
+	-webkit-transition: 2s opacity ease;
+	-moz-transition: 2s opacity ease;
+	-ms-transition: 2s opacity ease;
+	-o-transition: 2s opacity ease;
+	transition: 2s opacity ease;
+}
+.no-touch body {
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-ms-background-size: cover;
+	-o-background-size: cover; 
+	background-size: cover;
+	background-attachment: fixed;
+}
+.touch body {
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+	background-position: top;
 }
 
 ::-moz-selection {
@@ -62,18 +89,14 @@ body {
 }
 
 .container {
-	width: 38.2%;
-	position: relative;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
 	z-index: 1;
 	background: #222;
-	background: rgba(0,0,0,.8);
-	padding: 4em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
-	min-width: 28em;
+	background: rgba(0,0,0,.65);
+	padding: 8em 4em;
 }
 
 p,
@@ -102,24 +125,32 @@ a:hover {
 }
 
 h1, h2, h3, h4 {
-	font-weight: bold;
 	color: #fff;
 }
 h1 {
-	font: 3.5em 'Nothing you could do', cursive;
-	letter-spacing: -.075em;
+	font-size: 4em;
 	line-height: 1em;
-	margin: .25em 0 0em;
+	z-index: 1;
+	text-align: center;
+	cursor: default;
+	top: 80%;
+	left: 0;
+	right: 0;
+	position: fixed;
+}
+.touch h1 {
+	position: absolute;
+}
+h1,
+h2 {
+	font-weight: 100;
 }
 h2, h3 {
 	margin: .5em 0;
 }
 h2 {
-	font: 2em 'Nothing you could do', cursive;
+	font-size: 3em;
 	margin-bottom: 1.5em;
-}
-h2.subtitle {
-	font-size: 1.5em;
 }
 h3 {
 	font-size: 1.25em;
@@ -141,9 +172,6 @@ p:last-child {
 ul > li {
 	list-style: square;
 	margin: 0 0 1em 1.5em;
-}
-strong {
-	font-weight: bold;
 }
 
 .keywords {
@@ -199,69 +227,21 @@ section {
 
 small {
 	font-size: .9em;
-	color: #666;
+	color: #999;
 	margin-bottom: 0;
 }
 
-#bg {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-}
-#bg > img {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	min-width: 100%;
-	min-height: 100%;
-	display: block;
-}
-
-@media (max-width: 48em) {
-	#bg {
-		position: static;
+@media (max-width: 40em) {
+	h1 {
+		font-size: 3em;
+		top: 60%;
 	}
-	#bg > img {
-		position: static;
-		width: 100%;
-		height: auto;
-		min-width: 0;
-		min-height: 0;
+	h2 {
+		font-size: 2em;
 	}
 	.container {
-		position: relative;
-		top: auto;
-		left: auto;
-		right: auto;
-		bottom: auto;
-		width: auto;
-		margin: 0;
-		padding: 3em 3em 4em;
-		background: #151515;
+		padding: 2em 1em;
 	}
-	h1 {
-		font-size: 2.5em;
-	}
-	.projects {
-		overflow: hidden;
-	}
-	.project {
-		width: 48%;
-		float: left;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		-ms-box-sizing: border-box;
-		-o-box-sizing: border-box;
-		box-sizing: border-box;
-	}
-	.project:nth-child(even) {
-		margin-left: 0;
-	}
-}
-
-@media (max-width: 40em) {
 	.project {
 		width: auto;
 		float: none;
