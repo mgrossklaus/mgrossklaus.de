@@ -45,7 +45,7 @@ body {
 	color: #aaa;
 	background: #111;
 }
-.loading:after {
+body:after {
 	content: '';
 	display: block;
 	position: absolute;
