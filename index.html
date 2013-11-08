@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="styles.css">
 	<link rel="canonical" href="http://www.mgrossklaus.de/">
 </head>
-<body class="loading" itemscope itemtype="http://data-vocabulary.org/Person" id="mgrossklaus-de">
+<body itemscope itemtype="http://data-vocabulary.org/Person" id="mgrossklaus-de">
 
 	<div class="container" id="container">
 
@@ -272,9 +272,6 @@
         }
         loaded = true;
 
-        setTimeout(function() {
-					mgBody.className = '';
-				}, 2000);
 				mg.className += ' mg--loaded';
 			}
 
@@ -284,7 +281,7 @@
 			bgImg.onload = loadHandler;
 			bgImg.src = 'mg.jpg';
 
-			if (bgImg.complete) {
+			if(bgImg.complete) {
         loadHandler();
     	}
 		}
