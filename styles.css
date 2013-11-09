@@ -177,7 +177,6 @@ p,
 li,
 a,
 h1,
-h2,
 h3,
 h4,
 address,
@@ -239,6 +238,11 @@ h2 {
 }
 h2 {
 	margin: 0 0 1.25em;
+	line-height: 1.1em;
+}
+h2 > span {
+	color: #aaa;
+	font-size: .75em;
 }
 h3 {
 	font-size: 1.25em;
