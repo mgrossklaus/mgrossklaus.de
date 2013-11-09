@@ -19,7 +19,7 @@
 	<div class="container" id="container">
 
 		<div class="mg" id="mg">
-			<div class="bg"></div>
+			<div class="bg" id="bg"></div>
 			<h1 id="name" class="name" itemprop="name">Michael Großklaus</h1>
 		</div>
 
@@ -221,77 +221,7 @@
 			</section>
 		</div>
 	</div>
-	<script src="modernizr.js"></script>
-	<script>
-	window.onload = function() {
-
-		var mg			= document.getElementById('mg'),
-				mgName	= document.getElementById('name'),
-				mgBody	= document.getElementById('mgrossklaus-de'),
-				scrollY	= window.pageYOffset;
-
-		window.requestAnimFrame = (function(){
-			return  window.requestAnimationFrame       ||
-			window.webkitRequestAnimationFrame ||
-			window.mozRequestAnimationFrame    ||
-			function(callback) {
-				window.setTimeout(callback, 1000 / 60);
-			};
-		}());
-
-		if(!Modernizr.touch) {
-
-			function updateLayout(scrollY) {
-				if(scrollY <= 500) {
-					opac					= 1 - scrollY / 250;
-					gray					= scrollY / 75,
-					translateY		= scrollY / 1.5 * -1;
-					translateYstr	= 'translateY(' + translateY + '%)';
-				}
-				else {
-					opac					= 0;
-					gray					= 75;
-					translateYstr	= 'translateY(100%)';
-					mgBody.classList.remove('loading');
-				}
-
-				mgName.style.opacity					= opac;
-				mgName.style.MozTransform			= translateYstr;
-				mgName.style.webkitTransform	= translateYstr;
-				mgName.style.OTransform				= translateYstr;
-				mgName.style.msTransform			= translateYstr;
-				mgName.style.transform				= translateYstr;
-				document.getElementsByClassName('bg')[0].setAttribute('style', '-webkit-filter: grayscale('+ gray +'%)');
-			}
-
-			updateLayout(scrollY);
-
-			(function bgloop(){
-				requestAnimFrame(bgloop);
-				scrollY = window.pageYOffset;
-				updateLayout(scrollY);
-			})();
-		}
-
-		function loadHandler() {
-			if(loaded) {
-				return;
-			}
-			loaded = true;
-
-			mg.className += ' mg--loaded';
-		}
-
-		var bgImg		= new Image(),
-		loaded	= false;
-
-		bgImg.onload = loadHandler;
-		bgImg.src = 'mg.jpg';
-
-		if(bgImg.complete) {
-			loadHandler();
-		}
-	}
-	</script>
+	<script src="modernizr.application.min.js"></script>
+	<script src="application.js"></script>
 </body>
 </html>
