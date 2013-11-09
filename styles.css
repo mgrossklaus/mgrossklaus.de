@@ -169,7 +169,8 @@ body:after {
 	padding: 4em;
 }
 .touch .content {
-	padding-top: 100%;
+	position: absolute;
+	top: 100%;
 }
 
 p,
@@ -214,7 +215,6 @@ h1, h2, h3, h4 {
 }
 .touch .name {
 	position: absolute;
-	top: 50%;
 }
 .no-touch .name:after{
 	content: '';
@@ -322,7 +322,6 @@ small {
 @media (max-width: 40em) {
 	.name {
 		font-size: 3em;
-		top: 60%;
 	}
 	h2 {
 		font-size: 2em;
@@ -336,5 +335,10 @@ small {
 	}
 	.project:nth-child(even) {
 		margin-left: 1.5em;
+	}
+}
+@media (orientation: portrait) and (max-width: 40em) {
+	.touch .name {
+		top: 60%;
 	}
 }
