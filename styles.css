@@ -243,11 +243,6 @@ h2 {
 h3 {
 	font-size: 1.25em;
 }
-h4 > small {
-	font-weight: normal;
-	font-size: .8em;
-	color: #ffe701;
-}
 h4 > span {
 	font-weight: normal;
 }
