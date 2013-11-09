@@ -51,10 +51,10 @@ body:after {
 	position: absolute;
 	z-index: -1;
 	left: 50%;
-	margin: -20px 0 0 -20px;
-	width: 30px;
-	height: 30px;
-	border: 5px solid transparent;
+	margin: -1em 0 0 -1em;
+	width: 2em;
+	height: 2em;
+	border: .25em solid transparent;
 	border-right-color: #fff;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
@@ -129,11 +129,11 @@ body:after {
 
 ::-moz-selection {
 	background: #ffe701;
-	color: #fff;
+	color: #000;
 }
 ::selection {
 	background: #ffe701;
-	color: #fff;
+	color: #000;
 }
 
 .no-touch .container {
@@ -184,17 +184,16 @@ address,
 span,
 small {
 	line-height: 1.75em;
-	text-shadow: 1px 1px 1px #000;
 }
 a {
 	color: #ccc;
-	-webkit-transition: color .3s ease;
-	-moz-transition: color .3s ease;
-	-ms-transition: color .3s ease;
-	-o-transition: color .3s ease;
-	transition: color .3s ease;
+	-webkit-transition: color .2s ease;
+	-moz-transition: color .2s ease;
+	-ms-transition: color .2s ease;
+	-o-transition: color .2s ease;
+	transition: color .2s ease;
 	text-decoration: none;
-	border-bottom: 1px dotted;
+	border-bottom: .1em dotted;
 }
 a:hover,
 a:focus {
@@ -226,12 +225,12 @@ h1, h2, h3, h4 {
 	width: 0;
 	height: 0;
 	overflow: hidden;
-	border: 10px solid transparent;
+	border: .2em solid transparent;
 	border-top-color: #fff;
 	position: absolute;
 	left: 50%;
-	bottom: -100%;
-	margin-left: -10px;
+	bottom: -150%;
+	margin-left: -.2em;
 }
 .name,
 h2 {
@@ -244,9 +243,6 @@ h2 {
 h3 {
 	font-size: 1.25em;
 	margin: 0 0 .5em;
-}
-h4 > span {
-	font-weight: normal;
 }
 p, ul, ol, address {
 	margin-bottom: 1.5em;
@@ -281,7 +277,7 @@ ul > li {
 	padding: 0;
 }
 
-.contact_type {
+.contact__type {
 	display: inline-block;
 	float: left;
 	padding: 0 5em 1em 0;
@@ -307,7 +303,7 @@ ul > li {
 }
 
 section {
-	border-top: 1px dotted #666;
+	border-top: .1em dotted #666;
 	border-top-color: rgba(255,255,255,.25);
 	padding: 4em 0 0;
 	margin: 5em 0 0;
@@ -319,9 +315,8 @@ section:first-child {
 }
 
 small {
-	font-size: .9em;
+	font-size: .85em;
 	color: #999;
-	margin-bottom: 0;
 }
 
 @media (max-width: 40em) {
