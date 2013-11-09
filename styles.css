@@ -50,7 +50,6 @@ body:after {
 	display: block;
 	position: absolute;
 	z-index: -1;
-	top: 50%;
 	left: 50%;
 	margin: -20px 0 0 -20px;
 	width: 30px;
@@ -67,6 +66,12 @@ body:after {
 	-ms-animation: loading 1.5s linear infinite;
 	-o-animation: loading 1.5s linear infinite;
 	animation: loading 1.5s linear infinite;
+}
+.no-touch body:after {
+	top: 50%;
+}
+.touch body:after {
+	top: 25%;
 }
 @-webkit-keyframes loading {
 	from { -webkit-transform: rotate(0deg);   opacity: .2; }
@@ -96,9 +101,9 @@ body:after {
 
 .bg {
 	top: 0;
+	bottom: 0;
 	left: 0;
 	right: 0;
-	bottom: 0;
 	overflow: hidden;
 	background: url(mg.jpg) no-repeat;
 }
@@ -131,7 +136,7 @@ body:after {
 	color: #fff;
 }
 
-.container {
+.no-touch .container {
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -142,11 +147,19 @@ body:after {
 }
 .mg--loaded {
 	opacity: 1;
-	-webkit-transition: 2s opacity ease;
-	-moz-transition: 2s opacity ease;
-	-ms-transition: 2s opacity ease;
-	-o-transition: 2s opacity ease;
-	transition: 2s opacity ease;
+	-webkit-transition: .5s opacity ease;
+	-moz-transition: .5s opacity ease;
+	-ms-transition: .5s opacity ease;
+	-o-transition: .5s opacity ease;
+	transition: .5s opacity ease;
+}
+.touch .mg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
 }
 .content {
 	position: relative;
@@ -154,6 +167,9 @@ body:after {
 	background: #222;
 	background: rgba(0,0,0,.65);
 	padding: 4em;
+}
+.touch .content {
+	padding-top: 100%;
 }
 
 p,
@@ -198,6 +214,7 @@ h1, h2, h3, h4 {
 }
 .touch .name {
 	position: absolute;
+	top: 50%;
 }
 .no-touch .name:after{
 	content: '';
