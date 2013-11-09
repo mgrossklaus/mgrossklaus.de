@@ -193,9 +193,13 @@ a {
 	-ms-transition: color .3s ease;
 	-o-transition: color .3s ease;
 	transition: color .3s ease;
+	text-decoration: none;
+	border-bottom: 1px dotted;
 }
-a:hover {
+a:hover,
+a:focus {
 	color: #ffe701;
+	outline: none;
 }
 
 h1, h2, h3, h4 {
@@ -216,7 +220,7 @@ h1, h2, h3, h4 {
 .touch .name {
 	position: absolute;
 }
-.no-touch .name:after{
+.no-touch .name:after {
 	content: '';
 	display: block;
 	width: 0;
@@ -232,16 +236,14 @@ h1, h2, h3, h4 {
 .name,
 h2 {
 	font-weight: 100;
-}
-h2, h3 {
-	margin: .5em 0;
+	font-size: 3em;
 }
 h2 {
-	font-size: 3em;
-	margin-bottom: 1.5em;
+	margin: 0 0 1.25em;
 }
 h3 {
 	font-size: 1.25em;
+	margin: 0 0 .5em;
 }
 h4 > span {
 	font-weight: normal;
@@ -284,7 +286,7 @@ ul > li {
 	float: left;
 	padding: 0 5em 1em 0;
 }
-.law {
+.legal {
 	clear: both;
 }
 .contact .keyword {
@@ -292,6 +294,9 @@ ul > li {
 }
 .projects {
 	margin-bottom: 2.5em;
+}
+.projects:last-child {
+	margin-bottom: 0;
 }
 .project h4 {
 	display: inline-block;
@@ -306,6 +311,11 @@ section {
 	border-top-color: rgba(255,255,255,.25);
 	padding: 4em 0 0;
 	margin: 5em 0 0;
+}
+section:first-child {
+	border-top: none;
+	padding-top: 0;
+	margin-top: 0;
 }
 
 small {
