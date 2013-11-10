@@ -40,7 +40,7 @@ window.onload = function() {
 	function updateLayout(scrollY) {
 		if(scrollY <= 500) {
 			opac					= 1 - scrollY / 250;
-			gray					= scrollY / 75,
+			gray					= scrollY / 6.6667,
 			translateY		= scrollY / 1.5 * -1;
 			translateYstr	= 'translateY(' + translateY + '%)';
 		}
