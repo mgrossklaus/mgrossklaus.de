@@ -295,6 +295,9 @@ ul > li {
 .projects {
 	margin-bottom: 2.5em;
 }
+.projects--current {
+	margin-bottom: 4em;
+}
 .projects:last-child {
 	margin-bottom: 0;
 }
@@ -304,6 +307,14 @@ ul > li {
 }
 .project p {
 	display: inline-block;
+}
+.project--offline,
+.project--offline h4,
+.project--offline a {
+	color: #999;
+}
+.project--offline a {
+	text-decoration: line-through;
 }
 
 section {
