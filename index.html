@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="mgrossklaus-de">
 <head>
 	<meta charset="utf-8">
 	<title>Michael Großklaus - freelancer / web-developer Hamburg</title>
@@ -141,7 +141,7 @@
 		.mg {
 			opacity: 0;
 		}
-		.mg--loaded {
+		.mg--loaded .mg {
 			opacity: 1;
 			-webkit-transition: .5s opacity ease;
 			-moz-transition: .5s opacity ease;
@@ -212,18 +212,40 @@
 			}
 		}
 	</style>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,100">
 	<link rel="canonical" href="http://www.mgrossklaus.de/">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<!--[if lt IE 9]>
 	<script src="html5ie.js"></script>
 	<![endif]-->
+	<script>
+		var bgImg		= new Image(),
+				loaded	= false,
+				mg			= document.getElementById('mgrossklaus-de');
+
+		function loadHandler() {
+			if(loaded) {
+				return;
+			}
+			loaded = true;
+
+			mg.className += ' mg--loaded';
+		}
+
+		bgImg.onload = loadHandler;
+		bgImg.src = 'mg.jpg';
+
+		if(bgImg.complete) {
+			loadHandler();
+		}
+	</script>
 	<script src="modernizr.min.js"></script>
 </head>
 <body itemscope itemtype="http://data-vocabulary.org/Person" id="mgrossklaus-de">
 
 	<div class="container" id="container">
 
-		<div class="mg" id="mg">
+		<div class="mg">
 			<div class="bg" id="bg"></div>
 			<h1 id="name" class="name" itemprop="name">Michael Großklaus</h1>
 		</div>
@@ -438,7 +460,6 @@
 			</section>
 		</div>
 	</div>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,100" media="lazy" id="lazy-font">
 	<link rel="stylesheet" href="styles.css" media="lazy" id="lazy-css">
 	<script src="application.min.js"></script>
 </body>
