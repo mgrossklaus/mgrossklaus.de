@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="mgrossklaus-de">
 <head>
 	<meta charset="utf-8">
 	<title>Michael Großklaus - freelancer / web-developer Hamburg</title>
@@ -217,7 +217,20 @@
 	<!--[if lt IE 9]>
 	<script src="html5ie.js"></script>
 	<![endif]-->
-	<script src="modernizr.min.js"></script>
+	<script>
+		var touchClass,
+				touchDevice;
+		/* touch-detection by modernizr.com */
+		if(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+      touchClass = ' touch';
+      touchDevice = true;
+    }
+    else {
+    	touchClass = ' no-touch';
+    	touchDevice = false;
+    }
+    document.getElementById('mgrossklaus-de').className += touchClass;
+	</script>
 </head>
 <body itemscope itemtype="http://data-vocabulary.org/Person" id="mgrossklaus-de">
 

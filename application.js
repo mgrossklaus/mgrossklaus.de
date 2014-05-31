@@ -8,7 +8,7 @@
 					white:    true,
 					windows:  true,
 					nomen:    true*/
-/*global  window, Modernizr */
+/*global  window */
 document.addEventListener('DOMContentLoaded', function(event) {
 
 	var mg			= document.getElementById('mg'),
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 		mgBg.setAttribute('style', '-webkit-filter: grayscale('+ gray +'%)');
 	}
 
-	if(!Modernizr.touch) {
+	if(!touchDevice) {
 
 		updateLayout(scrollY);
 
