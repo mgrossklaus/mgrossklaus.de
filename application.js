@@ -9,10 +9,7 @@
 					windows:  true,
 					nomen:    true*/
 /*global  window, Modernizr */
-document.addEventListener("DOMContentLoaded", function(event) {
-
-	document.getElementById('lazy-css').media = 'screen';
-	document.getElementById('lazy-font').media = 'screen';
+document.addEventListener('DOMContentLoaded', function(event) {
 
 	var mg			= document.getElementById('mg'),
 			mgName	= document.getElementById('name'),
@@ -80,4 +77,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	if(bgImg.complete) {
 		loadHandler();
 	}
-}
+
+	document.getElementById('lazy-css').media = 'screen';
+	document.getElementById('lazy-font').media = 'screen';
+});
