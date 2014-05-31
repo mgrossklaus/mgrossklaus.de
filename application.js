@@ -79,5 +79,4 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	}
 
 	document.getElementById('lazy-css').media = 'screen';
-	document.getElementById('lazy-font').media = 'screen';
 });
