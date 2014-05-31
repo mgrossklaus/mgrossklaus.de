@@ -11,6 +11,8 @@
 /*global  window, Modernizr */
 window.onload = function() {
 
+	document.getElementById('lazy-css').media = 'screen';
+
 	var mg			= document.getElementById('mg'),
 			mgName	= document.getElementById('name'),
 			mgBody	= document.getElementById('mgrossklaus-de'),
