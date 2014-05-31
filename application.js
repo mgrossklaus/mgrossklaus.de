@@ -11,10 +11,13 @@
 /*global  window, Modernizr */
 document.addEventListener('DOMContentLoaded', function(event) {
 
-	var mgName	= document.getElementById('name'),
+	var mg			= document.getElementById('mg'),
+			mgName	= document.getElementById('name'),
 			mgBody	= document.getElementById('mgrossklaus-de'),
 			mgBg		= document.getElementById('bg'),
-			scrollY	= window.pageYOffset;
+			scrollY	= window.pageYOffset,
+			bgImg		= new Image(),
+			loaded	= false;
 
 	window.requestAnimFrame = (function(){
 		return  window.requestAnimationFrame       ||
@@ -24,6 +27,15 @@ document.addEventListener('DOMContentLoaded', function(event) {
 			window.setTimeout(callback, 1000 / 60);
 		};
 	}());
+
+	function loadHandler() {
+		if(loaded) {
+			return;
+		}
+		loaded = true;
+
+		mg.className += ' mg--loaded';
+	}
 
 	function updateLayout(scrollY) {
 		if(scrollY <= 500) {
@@ -59,5 +71,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
 		})();
 	}
 
+	bgImg.onload = loadHandler;
+	bgImg.src = 'mg.jpg';
+
+	if(bgImg.complete) {
+		loadHandler();
+	}
+
 	document.getElementById('lazy-css').media = 'screen';
+	document.getElementById('lazy-font').media = 'screen';
 });
