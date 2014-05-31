@@ -77,6 +77,4 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	if(bgImg.complete) {
 		loadHandler();
 	}
-
-	document.getElementById('lazy-css').media = 'screen';
 });
