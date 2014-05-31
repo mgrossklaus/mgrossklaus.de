@@ -9,10 +9,9 @@
 					windows:  true,
 					nomen:    true*/
 /*global  window, Modernizr */
-document.addEventListener("DOMContentLoaded", function(event) {
+window.onload = function() {
 
 	document.getElementById('lazy-css').media = 'screen';
-	document.getElementById('lazy-font').media = 'screen';
 
 	var mg			= document.getElementById('mg'),
 			mgName	= document.getElementById('name'),
