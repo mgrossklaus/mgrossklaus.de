@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
 			mgBg		= document.getElementById('bg'),
 			scrollY	= window.pageYOffset,
 			bgImg		= new Image(),
-			loaded	= false;
+			loaded	= false,
+			src;
 
 	window.requestAnimFrame = (function(){
 		return  window.requestAnimationFrame       ||
@@ -72,7 +73,23 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	}
 
 	bgImg.onload = loadHandler;
-	bgImg.src = 'mg.jpg';
+
+	if(window.matchMedia('(-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx)').matches) {
+		if(window.matchMedia('(max-width: 320px)').matches) {
+		  src = 'mg-640.jpg';
+		}
+		else if(window.matchMedia('(max-width: 640px)').matches) {
+		  src = 'mg-1280.jpg';
+		}
+		else {
+			src = 'mg.jpg';
+		}
+	}
+	else {
+	  src = 'mg.jpg';
+	}
+
+	bgImg.src = src;
 
 	if(bgImg.complete) {
 		loadHandler();
