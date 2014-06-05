@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 			mgBg		= document.getElementById('bg'),
 			scrollY	= window.pageYOffset,
 			bgImg		= new Image(),
-			loaded	= false,
-			src;
+			loaded	= false;
 
 	window.requestAnimFrame = (function(){
 		return  window.requestAnimationFrame       ||
@@ -74,22 +73,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 	bgImg.onload = loadHandler;
 
-	if(window.matchMedia('(-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx)').matches) {
-		if(window.matchMedia('(max-width: 320px)').matches) {
-		  src = 'mg-640.jpg';
-		}
-		else if(window.matchMedia('(max-width: 640px)').matches) {
-		  src = 'mg-1280.jpg';
-		}
-		else {
-			src = 'mg.jpg';
-		}
-	}
-	else {
-	  src = 'mg.jpg';
-	}
-
-	bgImg.src = src;
+	bgImg.src = 'images/mg.jpg';
 
 	if(bgImg.complete) {
 		loadHandler();
