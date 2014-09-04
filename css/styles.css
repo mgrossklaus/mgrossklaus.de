@@ -153,4 +153,15 @@ small {
 	.project:nth-child(even) {
 		margin-left: 1.5em;
 	}
+	p,
+	li,
+	a,
+	h1,
+	h3,
+	h4,
+	address,
+	span,
+	small {
+		line-height: 2em;
+	}
 }
