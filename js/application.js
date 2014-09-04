@@ -88,14 +88,14 @@ loadCSS: load a CSS file asynchronously.
 Licensed MIT
 */
 
-var ss = window.document.createElement( "link" );
+var ss = window.document.createElement( 'link' );
 ss.rel = "stylesheet";
 ss.href = assetUrl + '/css/styles.min.css';
 // temporarily, set media to something non-matching to ensure it'll fetch without blocking render
 ss.media = "only x";
 // inject link
-ref.parentNode.insertAfter( ss, document.getElementsByTagName('style')[0] );
+document.getElementsByTagName('head')[0].appendChild( ss );
 // set media back to `all` so that the styleshet applies once it loads
 setTimeout( function(){
-	ss.media = media || "all";
+	ss.media = "all";
 } );
