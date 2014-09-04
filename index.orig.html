@@ -70,6 +70,7 @@
 			display: block;
 			position: absolute;
 			z-index: -1;
+			top: 50%;
 			left: 50%;
 			margin: -1em 0 0 -1em;
 			width: 2em;
@@ -86,9 +87,6 @@
 			-ms-animation: loading 1.5s linear infinite;
 			-o-animation: loading 1.5s linear infinite;
 			animation: loading 1.5s linear infinite;
-		}
-		.no-touch body:after {
-			top: 50%;
 		}
 		.touch body:after {
 			top: 25%;
@@ -579,5 +577,28 @@
 			ss.media = "all";
 		} );
 	</script>
+	<noscript>
+		<link rel="stylesheet" href="http://files.mgrossklaus.de/css/styles.min.css">
+		<style>
+			.bg {
+				position: fixed;
+				-webkit-background-size: cover; 
+				-moz-background-size: cover; 
+				-ms-background-size: cover;
+				-o-background-size: cover; 
+				background-size: cover;
+				background-position: center;
+			}
+			.container {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 100%;
+			}
+			.mg {
+				opacity: 1;
+			}
+		</style>
+	</noscript>
 </body>
 </html>
