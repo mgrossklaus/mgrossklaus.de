@@ -9,7 +9,7 @@
 					windows:  true,
 					nomen:    true*/
 /*global  window */
-var assetUrl = 'http://cdn.mgrossklaus.de';
+var assetUrl = 'http://files.mgrossklaus.de';
 
 document.addEventListener('DOMContentLoaded', function(event) {
 
