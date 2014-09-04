@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 	bgImg.onload = loadHandler;
 
-	bgImg.src = 'images/mg.jpg';
+	bgImg.src = 'http://files.mgrossklaus.de/mg.jpg';
 
 	if(bgImg.complete) {
 		loadHandler();
