@@ -8,7 +8,7 @@
 	<meta name="viewport" content="initial-scale=1">
 	<link rel="dns-prefetch" href="//static.mgrossklaus.de">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link href="http://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+	<link rel="dns-prefetch" href="//themes.googleusercontent.com">
 	<style>
 		/* http://meyerweb.com/eric/tools/css/reset/ 
 			 v2.0 | 20110126
@@ -220,17 +220,17 @@
 	<![endif]-->
 	<script>
 		var touchClass,
-				touchDevice;
+			touchDevice;
 		/* touch-detection by modernizr.com */
 		if(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
-      touchClass = ' touch';
-      touchDevice = true;
-    }
-    else {
-    	touchClass = ' no-touch';
-    	touchDevice = false;
-    }
-    document.getElementById('mgrossklaus-de').className += touchClass;
+		  touchClass = ' touch';
+		  touchDevice = true;
+		}
+		else {
+			touchClass = ' no-touch';
+			touchDevice = false;
+		}
+		document.getElementById('mgrossklaus-de').className += touchClass;
 	</script>
 </head>
 <body itemscope itemtype="http://data-vocabulary.org/Person">
@@ -481,18 +481,18 @@
 
 		document.addEventListener('DOMContentLoaded', function(event) {
 
-			var mg			= document.getElementById('mg'),
-					mgName	= document.getElementById('name'),
-					mgBody	= document.getElementById('mgrossklaus-de'),
-					mgBg		= document.getElementById('bg'),
-					scrollY	= window.pageYOffset,
-					bgImg		= new Image(),
-					loaded	= false;
+			var mg      = document.getElementById('mg'),
+				mgName  = document.getElementById('name'),
+				mgBody  = document.getElementById('mgrossklaus-de'),
+				mgBg    = document.getElementById('bg'),
+				scrollY = window.pageYOffset,
+				bgImg   = new Image(),
+				loaded  = false;
 
 			window.requestAnimFrame = (function(){
 				return  window.requestAnimationFrame       ||
-								window.webkitRequestAnimationFrame ||
-								window.mozRequestAnimationFrame    ||
+						window.webkitRequestAnimationFrame ||
+						window.mozRequestAnimationFrame    ||
 				function(callback) {
 					window.setTimeout(callback, 1000 / 60);
 				};
@@ -509,24 +509,24 @@
 
 			function updateLayout(scrollY) {
 				if(scrollY <= 500) {
-					opac					= 1 - scrollY / 250;
-					gray					= scrollY / 6.6667,
-					translateY		= scrollY / 1.5 * -1;
-					translateYstr	= 'translateY(' + translateY + '%)';
+					opac = 1 - scrollY / 250;
+					gray = scrollY / 6.6667,
+					translateY    = scrollY / 1.5 * -1;
+					translateYstr = 'translateY(' + translateY + '%)';
 				}
 				else {
-					opac					= 0;
-					gray					= 75;
-					translateYstr	= 'translateY(100%)';
+					opac = 0;
+					gray = 75;
+					translateYstr = 'translateY(100%)';
 					mgBody.classList.remove('loading');
 				}
 
-				mgName.style.opacity					= opac;
-				mgName.style.MozTransform			= translateYstr;
-				mgName.style.webkitTransform	= translateYstr;
-				mgName.style.OTransform				= translateYstr;
-				mgName.style.msTransform			= translateYstr;
-				mgName.style.transform				= translateYstr;
+				mgName.style.opacity         = opac;
+				mgName.style.MozTransform    = translateYstr;
+				mgName.style.webkitTransform = translateYstr;
+				mgName.style.OTransform      = translateYstr;
+				mgName.style.msTransform     = translateYstr;
+				mgName.style.transform       = translateYstr;
 				mgBg.setAttribute('style', '-webkit-filter: grayscale('+ gray +'%)');
 			}
 
@@ -555,18 +555,30 @@
 		[c]2014 @scottjehl, Filament Group, Inc.
 		Licensed MIT
 		*/
+		var cssArr  = ['https://fonts.googleapis.com/css?family=Raleway:200', assetUrl + '/css/styles.min.css'],
+			cssArrL = cssArr.length,
+			ssArr,
+			i;
 
-		var ss = window.document.createElement( 'link' );
-		ss.rel = "stylesheet";
-		ss.href = assetUrl + '/css/styles.min.css';
-		// temporarily, set media to something non-matching to ensure it'll fetch without blocking render
-		ss.media = "only x";
-		// inject link
-		document.getElementsByTagName('head')[0].appendChild( ss );
-		// set media back to `all` so that the styleshet applies once it loads
+		for(i = 0; i < cssArrL; i++) {
+			var ss = window.document.createElement('link');
+			ss.rel = "stylesheet";
+			ss.className = "lazy-css";
+			ss.href = cssArr[i];
+			// temporarily, set media to something non-matching to ensure it'll fetch without blocking render
+			ss.media = "only x";
+			// inject link
+			document.getElementsByTagName('head')[0].appendChild( ss );
+			// set media back to `all` so that the styleshet applies once it loads
+		}
+
+		ssArr = document.querySelectorAll('.lazy-css');
+
 		setTimeout( function(){
-			ss.media = "all";
-		} );
+			for(i = 0; i < cssArrL; i++) {
+				ssArr[i].media = "all";
+			}
+		});
 	</script>
 	<noscript>
 		<link rel="stylesheet" href="http://static.mgrossklaus.de/css/styles.min.css">
