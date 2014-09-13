@@ -116,26 +116,48 @@
 			50%  { transform: rotate(180deg); opacity: 1; }
 			to   { transform: rotate(360deg); opacity: .2; }
 		}
-		.mg {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-		}
 		.bg {
-			position: absolute;
 			top: 0;
-			left: 0;
-			min-width: 100%;
-			min-height: 100%;
-		}
-		.content {
-			position: absolute;
-			top: 100%;
+			bottom: 0;
 			left: 0;
 			right: 0;
+			overflow: hidden;
+			background: url(http://static.mgrossklaus.de/images/mg.jpg) no-repeat;
+		}
+		.no-touch .bg {
+			position: fixed;
+			-webkit-background-size: cover; 
+			-moz-background-size: cover; 
+			-ms-background-size: cover;
+			-o-background-size: cover; 
+			background-size: cover;
+			background-position: center;
+		}
+		.touch .bg {
+			position: absolute;
+			-webkit-background-size: 100% auto; 
+			-moz-background-size: 100% auto; 
+			-ms-background-size: 100% auto; 
+			-o-background-size: 100% auto; 
+			background-size: 100% auto;
+			background-position: top;
+		}
+		.no-touch .container {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 100%;
+		}
+		.touch .mg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 2;
+		}
+		.content {
+			position: relative;
 			z-index: 1;
 			background: #222;
 			background: rgba(0,0,0,.65);
@@ -214,7 +236,7 @@
 	<div class="container" id="container">
 
 		<div class="mg" id="mg">
-			<img class="bg" id="bg" src="http://static.mgrossklaus.de/images/mg.jpg" alt="Michael Großklaus">
+			<div class="bg" id="bg"></div>
 			<h1 id="name" class="name" itemprop="name">Michael Großklaus</h1>
 		</div>
 
@@ -539,6 +561,23 @@
 	</script>
 	<noscript>
 		<link rel="stylesheet" href="http://static.mgrossklaus.de/css/styles.min.css">
+		<style>
+			.bg {
+				position: fixed;
+				-webkit-background-size: cover; 
+				-moz-background-size: cover; 
+				-ms-background-size: cover;
+				-o-background-size: cover; 
+				background-size: cover;
+				background-position: center;
+			}
+			.container {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 100%;
+			}
+		</style>
 	</noscript>
 </body>
 </html>
