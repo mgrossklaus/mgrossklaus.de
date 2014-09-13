@@ -9,7 +9,8 @@
 					windows:  true,
 					nomen:    true*/
 /*global  window */
-var assetUrl = 'http://static.mgrossklaus.de';
+var assetUrl = 'http://assets.mgrossklaus.de',
+	ss;
 
 document.addEventListener('DOMContentLoaded', function(event) {
 
@@ -75,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 	bgImg.onload = loadHandler;
 
-	bgImg.src = assetUrl + '/mg.jpg';
+	bgImg.src = assetUrl + '/images/mg.jpg';
 
 	if(bgImg.complete) {
 		loadHandler();
@@ -88,7 +89,7 @@ loadCSS: load a CSS file asynchronously.
 Licensed MIT
 */
 
-var ss = window.document.createElement( 'link' );
+ss = window.document.createElement( 'link' );
 ss.rel = "stylesheet";
 ss.href = assetUrl + '/css/styles.min.css';
 // temporarily, set media to something non-matching to ensure it'll fetch without blocking render
