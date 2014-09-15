@@ -708,14 +708,6 @@
 				};
 			}());
 
-			function loadHandler() {
-				if(loaded) {
-					return;
-				}
-				loaded = true;
-
-				mg.className += ' mg--loaded';
-			}
 
 			function updateLayout(scrollY) {
 				if(scrollY <= 500) {
