@@ -9,21 +9,21 @@ var gulp     = require('gulp'),
 
 gulp
 	.task('imagemin', function () {
-		gulp.src('images/*')
+		gulp.src('assets/images/*')
 			.pipe(imagemin({
 				progressive: true
 			}))
 			.pipe(gulp.dest('dist'));
 	})
-	.task('cssmin', function () {
-		gulp.src('index.html')
-			.pipe(cssmin())
-			.pipe(rename({suffix: '.min'}))
-			.pipe(gulp.dest('dist'));
-	})
 	.task('webp', function () {
 		gulp.src('images/mg.jpg')
 			.pipe(webp())
+			.pipe(gulp.dest('dist'));
+	})
+	.task('cssmin', function () {
+		gulp.src('assets/css/*.css')
+			.pipe(cssmin())
+			.pipe(rename({suffix: '.min'}))
 			.pipe(gulp.dest('dist'));
 	})
 	.task('uncss', function() {
@@ -33,15 +33,10 @@ gulp
 			}))
 			.pipe(gulp.dest('dist'));
 	})
-	.task('uglify', function() {
-		gulp.src('js/*.js')
-			.pipe(uglify())
-			.pipe(gulp.dest('dist'))
-	})
 	.task('htmlmin', function() {
 		gulp.src('index.html')
 		.pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(gulp.dest('dist'))
 	})
 
-	.task('default', ['imagemin', 'cssmin', 'webp', 'uncss', 'uglify', 'htmlmin']);
+	.task('default', ['imagemin', 'webp', 'uncss', 'cssmin', 'htmlmin']);
