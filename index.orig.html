@@ -148,17 +148,6 @@
 			right: 0;
 			top: 100%;
 		}
-		.mg {
-			opacity: 0;
-		}
-		.mg--loaded {
-			opacity: 1;
-			-webkit-transition: .25s opacity ease;
-			-moz-transition: .25s opacity ease;
-			-ms-transition: .25s opacity ease;
-			-o-transition: .25s opacity ease;
-			transition: .25s opacity ease;
-		}
 		.touch .mg {
 			position: absolute;
 			top: 0;
@@ -556,14 +545,6 @@
 					updateLayout(scrollY);
 				})();
 			}
-
-			bgImg.onload = loadHandler;
-
-			bgImg.src = assetUrl + '/images/mg.jpg';
-
-			if(bgImg.complete) {
-				loadHandler();
-			}
 		});
 
 		/*!
@@ -613,9 +594,6 @@
 				left: 0;
 				right: 0;
 				top: 100%;
-			}
-			.mg {
-				opacity: 1;
 			}
 		</style>
 	</noscript>
