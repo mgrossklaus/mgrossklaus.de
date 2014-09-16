@@ -110,6 +110,10 @@ ul > li {
 .project p {
 	display: inline-block;
 }
+.project a {
+	display: inline-block;
+	margin: 0 .5em 0 0;
+}
 .project--offline,
 .project--offline h4,
 .project--offline a {
