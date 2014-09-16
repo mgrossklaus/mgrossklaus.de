@@ -1,38 +1,41 @@
 var gulp       = require('gulp'),
 	imagemin   = require('gulp-imagemin'),
-	webp       = require('gulp-webp'),
 	uncss      = require('gulp-uncss'),
-	uglify     = require('gulp-uglify'),
 	rename     = require('gulp-rename'),
 	compressor = require('gulp-compressor'),
-	minifyCSS  = require('gulp-minify-css')
+	minifyCSS  = require('gulp-minify-css'),
+	frep       = require('gulp-frep'),
 
-	dist       = 'dist/';
+	dist       = 'dist/',
+	patterns   = [{
+		pattern: /localhost/ig,
+		replacement: 'static.mgrossklaus.de'
+ 	}, {
+ 		pattern: /styles.css/ig,
+ 		replacement: 'styles.min.css'
+ 	}];
 
 gulp
-	.task('imagemin', function() {
-		gulp.src('assets/images/*')
+	.task('images', function() {
+		gulp.src('images/*')
 			.pipe(imagemin({
 				progressive: true
 			}))
-			.pipe(gulp.dest(dist));
-	})
-	.task('webp', function() {
-		gulp.src('images/mg.jpg')
-			.pipe(webp())
-			.pipe(gulp.dest(dist));
+			.pipe(gulp.dest(dist + 'images/'));
 	})
 	.task('css', function() {
-		gulp.src('assets/css/*.css')
+		gulp.src('css/*.css')
 			.pipe(uncss({
 				html: ['index.html']
 			}))
 			.pipe(minifyCSS())
 			.pipe(rename({suffix: '.min'}))
-			.pipe(gulp.dest(dist));
+			.pipe(gulp.dest(dist + 'css/'));
 	})
-	.task('compressor', function() {
+
+	.task('html', function() {
 		gulp.src('index.html')
+			.pipe(frep(patterns))
 			.pipe(compressor({
 				'remove-intertag-spaces': true,
 				'simple-bool-attr': true,
@@ -42,4 +45,4 @@ gulp
 			.pipe(gulp.dest(dist));
 	})
 
-	.task('default', ['imagemin', 'webp', 'css', 'compressor']);
+	.task('default', ['images', 'css', 'html']);

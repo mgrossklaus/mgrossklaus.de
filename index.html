@@ -6,10 +6,9 @@
 	<meta name="description" content="i'm a freelancing web-developer based in hamburg, germany. you can hire me for frontend jobs.">
 	<meta name="keywords" content="front-end, web-development, html, css, javascript, betahaus, hamburg, michael großklaus, design, engineering">
 	<meta name="viewport" content="initial-scale=1">
-	<link rel="dns-prefetch" href="//static.mgrossklaus.de">
 	<script>
 		/* Modernizr 2.8.3 (Custom Build) | MIT & BSD
-		 * Build: http://modernizr.com/download/#-touch-cssclasses-teststyles-prefixes-img_webp
+		 * Build: http://modernizr.com/download/#-touch-cssclasses-teststyles-prefixes
 		 */
 		;
 
@@ -17,252 +16,233 @@
 
 		window.Modernizr = (function( window, document, undefined ) {
 
-		    var version = '2.8.3',
+			var version = '2.8.3',
 
-		    Modernizr = {},
+			Modernizr = {},
 
-		    enableClasses = true,
+			enableClasses = true,
 
-		    docElement = document.documentElement,
+			docElement = document.documentElement,
 
-		    mod = 'modernizr',
-		    modElem = document.createElement(mod),
-		    mStyle = modElem.style,
+			mod = 'modernizr',
+			modElem = document.createElement(mod),
+			mStyle = modElem.style,
 
-		    inputElem  ,
+			inputElem  ,
 
 
-		    toString = {}.toString,
+			toString = {}.toString,
 
-		    prefixes = ' -webkit- -moz- -o- -ms- '.split(' '),
+			prefixes = ' -webkit- -moz- -o- -ms- '.split(' '),
 
 
 
-		    tests = {},
-		    inputs = {},
-		    attrs = {},
+			tests = {},
+			inputs = {},
+			attrs = {},
 
-		    classes = [],
+			classes = [],
 
-		    slice = classes.slice,
+			slice = classes.slice,
 
-		    featureName, 
+			featureName, 
 
 
-		    injectElementWithStyles = function( rule, callback, nodes, testnames ) {
+			injectElementWithStyles = function( rule, callback, nodes, testnames ) {
 
-		      var style, ret, node, docOverflow,
-		          div = document.createElement('div'),
-		                body = document.body,
-		                fakeBody = body || document.createElement('body');
+			  var style, ret, node, docOverflow,
+				  div = document.createElement('div'),
+						body = document.body,
+						fakeBody = body || document.createElement('body');
 
-		      if ( parseInt(nodes, 10) ) {
-		                      while ( nodes-- ) {
-		              node = document.createElement('div');
-		              node.id = testnames ? testnames[nodes] : mod + (nodes + 1);
-		              div.appendChild(node);
-		          }
-		      }
+			  if ( parseInt(nodes, 10) ) {
+							  while ( nodes-- ) {
+					  node = document.createElement('div');
+					  node.id = testnames ? testnames[nodes] : mod + (nodes + 1);
+					  div.appendChild(node);
+				  }
+			  }
 
-		                style = ['&#173;','<style id="s', mod, '">', rule, '</style>'].join('');
-		      div.id = mod;
-		          (body ? div : fakeBody).innerHTML += style;
-		      fakeBody.appendChild(div);
-		      if ( !body ) {
-		                fakeBody.style.background = '';
-		                fakeBody.style.overflow = 'hidden';
-		          docOverflow = docElement.style.overflow;
-		          docElement.style.overflow = 'hidden';
-		          docElement.appendChild(fakeBody);
-		      }
+						style = ['&#173;','<style id="s', mod, '">', rule, '</style>'].join('');
+			  div.id = mod;
+				  (body ? div : fakeBody).innerHTML += style;
+			  fakeBody.appendChild(div);
+			  if ( !body ) {
+						fakeBody.style.background = '';
+						fakeBody.style.overflow = 'hidden';
+				  docOverflow = docElement.style.overflow;
+				  docElement.style.overflow = 'hidden';
+				  docElement.appendChild(fakeBody);
+			  }
 
-		      ret = callback(div, rule);
-		        if ( !body ) {
-		          fakeBody.parentNode.removeChild(fakeBody);
-		          docElement.style.overflow = docOverflow;
-		      } else {
-		          div.parentNode.removeChild(div);
-		      }
+			  ret = callback(div, rule);
+				if ( !body ) {
+				  fakeBody.parentNode.removeChild(fakeBody);
+				  docElement.style.overflow = docOverflow;
+			  } else {
+				  div.parentNode.removeChild(div);
+			  }
 
-		      return !!ret;
+			  return !!ret;
 
-		    },
-		    _hasOwnProperty = ({}).hasOwnProperty, hasOwnProp;
+			},
+			_hasOwnProperty = ({}).hasOwnProperty, hasOwnProp;
 
-		    if ( !is(_hasOwnProperty, 'undefined') && !is(_hasOwnProperty.call, 'undefined') ) {
-		      hasOwnProp = function (object, property) {
-		        return _hasOwnProperty.call(object, property);
-		      };
-		    }
-		    else {
-		      hasOwnProp = function (object, property) { 
-		        return ((property in object) && is(object.constructor.prototype[property], 'undefined'));
-		      };
-		    }
+			if ( !is(_hasOwnProperty, 'undefined') && !is(_hasOwnProperty.call, 'undefined') ) {
+			  hasOwnProp = function (object, property) {
+				return _hasOwnProperty.call(object, property);
+			  };
+			}
+			else {
+			  hasOwnProp = function (object, property) { 
+				return ((property in object) && is(object.constructor.prototype[property], 'undefined'));
+			  };
+			}
 
 
-		    if (!Function.prototype.bind) {
-		      Function.prototype.bind = function bind(that) {
+			if (!Function.prototype.bind) {
+			  Function.prototype.bind = function bind(that) {
 
-		        var target = this;
+				var target = this;
 
-		        if (typeof target != "function") {
-		            throw new TypeError();
-		        }
+				if (typeof target != "function") {
+					throw new TypeError();
+				}
 
-		        var args = slice.call(arguments, 1),
-		            bound = function () {
+				var args = slice.call(arguments, 1),
+					bound = function () {
 
-		            if (this instanceof bound) {
+					if (this instanceof bound) {
 
-		              var F = function(){};
-		              F.prototype = target.prototype;
-		              var self = new F();
-
-		              var result = target.apply(
-		                  self,
-		                  args.concat(slice.call(arguments))
-		              );
-		              if (Object(result) === result) {
-		                  return result;
-		              }
-		              return self;
+					  var F = function(){};
+					  F.prototype = target.prototype;
+					  var self = new F();
+
+					  var result = target.apply(
+						  self,
+						  args.concat(slice.call(arguments))
+					  );
+					  if (Object(result) === result) {
+						  return result;
+					  }
+					  return self;
 
-		            } else {
+					} else {
 
-		              return target.apply(
-		                  that,
-		                  args.concat(slice.call(arguments))
-		              );
+					  return target.apply(
+						  that,
+						  args.concat(slice.call(arguments))
+					  );
 
-		            }
+					}
 
-		        };
+				};
 
-		        return bound;
-		      };
-		    }
+				return bound;
+			  };
+			}
 
-		    function setCss( str ) {
-		        mStyle.cssText = str;
-		    }
+			function setCss( str ) {
+				mStyle.cssText = str;
+			}
 
-		    function setCssAll( str1, str2 ) {
-		        return setCss(prefixes.join(str1 + ';') + ( str2 || '' ));
-		    }
+			function setCssAll( str1, str2 ) {
+				return setCss(prefixes.join(str1 + ';') + ( str2 || '' ));
+			}
 
-		    function is( obj, type ) {
-		        return typeof obj === type;
-		    }
+			function is( obj, type ) {
+				return typeof obj === type;
+			}
 
-		    function contains( str, substr ) {
-		        return !!~('' + str).indexOf(substr);
-		    }
+			function contains( str, substr ) {
+				return !!~('' + str).indexOf(substr);
+			}
 
 
-		    function testDOMProps( props, obj, elem ) {
-		        for ( var i in props ) {
-		            var item = obj[props[i]];
-		            if ( item !== undefined) {
+			function testDOMProps( props, obj, elem ) {
+				for ( var i in props ) {
+					var item = obj[props[i]];
+					if ( item !== undefined) {
 
-		                            if (elem === false) return props[i];
+									if (elem === false) return props[i];
 
-		                            if (is(item, 'function')){
-		                                return item.bind(elem || obj);
-		                }
+									if (is(item, 'function')){
+										return item.bind(elem || obj);
+						}
 
-		                            return item;
-		            }
-		        }
-		        return false;
-		    }
-		    tests['touch'] = function() {
-		        var bool;
+									return item;
+					}
+				}
+				return false;
+			}
+			tests['touch'] = function() {
+				var bool;
 
-		        if(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
-		          bool = true;
-		        } else {
-		          injectElementWithStyles(['@media (',prefixes.join('touch-enabled),('),mod,')','{#modernizr{top:9px;position:absolute}}'].join(''), function( node ) {
-		            bool = node.offsetTop === 9;
-		          });
-		        }
+				if(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+				  bool = true;
+				} else {
+				  injectElementWithStyles(['@media (',prefixes.join('touch-enabled),('),mod,')','{#modernizr{top:9px;position:absolute}}'].join(''), function( node ) {
+					bool = node.offsetTop === 9;
+				  });
+				}
 
-		        return bool;
-		    };
-		    for ( var feature in tests ) {
-		        if ( hasOwnProp(tests, feature) ) {
-		                                    featureName  = feature.toLowerCase();
-		            Modernizr[featureName] = tests[feature]();
+				return bool;
+			};
+			for ( var feature in tests ) {
+				if ( hasOwnProp(tests, feature) ) {
+											featureName  = feature.toLowerCase();
+					Modernizr[featureName] = tests[feature]();
 
-		            classes.push((Modernizr[featureName] ? '' : 'no-') + featureName);
-		        }
-		    }
+					classes.push((Modernizr[featureName] ? '' : 'no-') + featureName);
+				}
+			}
 
 
 
-		     Modernizr.addTest = function ( feature, test ) {
-		       if ( typeof feature == 'object' ) {
-		         for ( var key in feature ) {
-		           if ( hasOwnProp( feature, key ) ) {
-		             Modernizr.addTest( key, feature[ key ] );
-		           }
-		         }
-		       } else {
+			 Modernizr.addTest = function ( feature, test ) {
+			   if ( typeof feature == 'object' ) {
+				 for ( var key in feature ) {
+				   if ( hasOwnProp( feature, key ) ) {
+					 Modernizr.addTest( key, feature[ key ] );
+				   }
+				 }
+			   } else {
 
-		         feature = feature.toLowerCase();
+				 feature = feature.toLowerCase();
 
-		         if ( Modernizr[feature] !== undefined ) {
-		                                              return Modernizr;
-		         }
+				 if ( Modernizr[feature] !== undefined ) {
+													  return Modernizr;
+				 }
 
-		         test = typeof test == 'function' ? test() : test;
+				 test = typeof test == 'function' ? test() : test;
 
-		         if (typeof enableClasses !== "undefined" && enableClasses) {
-		           docElement.className += ' ' + (test ? '' : 'no-') + feature;
-		         }
-		         Modernizr[feature] = test;
+				 if (typeof enableClasses !== "undefined" && enableClasses) {
+				   docElement.className += ' ' + (test ? '' : 'no-') + feature;
+				 }
+				 Modernizr[feature] = test;
 
-		       }
+			   }
 
-		       return Modernizr; 
-		     };
+			   return Modernizr; 
+			 };
 
 
-		    setCss('');
-		    modElem = inputElem = null;
+			setCss('');
+			modElem = inputElem = null;
 
 
-		    Modernizr._version      = version;
+			Modernizr._version      = version;
 
-		    Modernizr._prefixes     = prefixes;
+			Modernizr._prefixes     = prefixes;
 
-		    Modernizr.testStyles    = injectElementWithStyles;    docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') +
+			Modernizr.testStyles    = injectElementWithStyles;    docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') +
 
-		                                                    (enableClasses ? ' js ' + classes.join(' ') : '');
+															(enableClasses ? ' js ' + classes.join(' ') : '');
 
-		    return Modernizr;
+			return Modernizr;
 
 		})(this, this.document);
-		// code.google.com/speed/webp/
-		// by rich bradshaw, ryan seddon, and paul irish
-
-
-		// This test is asynchronous. Watch out.
-
-		(function(){
-
-		  var image = new Image();
-
-		  image.onerror = function() {
-		      Modernizr.addTest('webp', false);
-		  };  
-		  image.onload = function() {
-		      Modernizr.addTest('webp', function() { return image.width == 1; });
-		  };
-
-		  image.src = 'data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAAAUAgCdASoBAAEAL/3+/3+CAB/AAAFzrNsAAP5QAAAAAA==';
-
-		}());;
+		;
 	</script>
 	<style>
 		/* http://meyerweb.com/eric/tools/css/reset/ 
@@ -308,12 +288,12 @@
 		}
 		@font-face {
 			font-family: 'Raleway';
-			src: url('http://static.mgrossklaus.de/fonts/raleway-extralight-webfont.eot');
-			src: url('http://static.mgrossklaus.de/fonts/raleway-extralight-webfont.eot?#iefix') format('embedded-opentype'),
-				 url('http://static.mgrossklaus.de/fonts/raleway-extralight-webfont.woff2') format('woff2'),
-				 url('http://static.mgrossklaus.de/fonts/raleway-extralight-webfont.woff') format('woff'),
-				 url('http://static.mgrossklaus.de/fonts/raleway-extralight-webfont.ttf') format('truetype'),
-				 url('http://static.mgrossklaus.de/fonts/raleway-extralight-webfont.svg#ralewayextralight') format('svg');
+			src: url('http://localhost/fonts/raleway-extralight-webfont.eot');
+			src: url('http://localhost/fonts/raleway-extralight-webfont.eot?#iefix') format('embedded-opentype'),
+				 url('http://localhost/fonts/raleway-extralight-webfont.woff2') format('woff2'),
+				 url('http://localhost/fonts/raleway-extralight-webfont.woff') format('woff'),
+				 url('http://localhost/fonts/raleway-extralight-webfont.ttf') format('truetype'),
+				 url('http://localhost/fonts/raleway-extralight-webfont.svg#ralewayextralight') format('svg');
 			font-weight: normal;
 			font-style: normal;
 		}
@@ -380,12 +360,7 @@
 			right: 0;
 			overflow: hidden;
 			background-repeat: no-repeat;
-		}
-		.no-webp .bg {
-			background-image: url(http://static.mgrossklaus.de/images/mg.jpg);
-		}
-		.webp .bg {
-			background-image: url(http://static.mgrossklaus.de/images/mg.webp);
+			background-image: url(http://localhost/images/mg.jpg);
 		}
 		.no-touch .bg {
 			position: fixed;
@@ -475,9 +450,9 @@
 		}
 	</style>
 	<link rel="canonical" href="http://www.mgrossklaus.de/">
-	<link rel="shortcut icon" href="http://static.mgrossklaus.de/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="http://localhost/favicon.ico" type="image/x-icon">
 	<!--[if lt IE 9]>
-	<script src="js/html5.min.js"></script>
+	<script src="http://localhost/js/html5.min.js"></script>
 	<![endif]-->
 </head>
 <body itemscope itemtype="http://data-vocabulary.org/Person">
@@ -720,18 +695,7 @@
 		</div>
 	</div>
 	<script>
-		/*jslint  browser:  true,
-					devel:    true,
-					eqeq:     true,
-					indent:   2,
-					plusplus: true,
-					sloppy:   true,
-					undef:    true,
-					white:    true,
-					windows:  true,
-					nomen:    true*/
-		/*global  window */
-		var assetUrl = 'http://static.mgrossklaus.de';
+		var assetUrl = 'http://localhost';
 
 		document.addEventListener('DOMContentLoaded', function(event) {
 
@@ -793,7 +757,7 @@
 		[c]2014 @scottjehl, Filament Group, Inc.
 		Licensed MIT
 		*/
-		var cssArr  = [assetUrl + '/css/styles.min.css'],
+		var cssArr  = [assetUrl + '/css/styles.css'],
 			cssArrL = cssArr.length,
 			ssArr,
 			i;
@@ -819,7 +783,7 @@
 		});
 	</script>
 	<noscript>
-		<link rel="stylesheet" href="http://static.mgrossklaus.de/css/styles.min.css">
+		<link rel="stylesheet" href="http://localhost/css/styles.min.css">
 		<style>
 			.bg {
 				position: fixed;
@@ -829,7 +793,7 @@
 				-o-background-size: cover; 
 				background-size: cover;
 				background-position: center;
-				background-image: url(http://static.mgrossklaus.de/images/mg.jpg);
+				background-image: url(http://localhost/images/mg.jpg);
 			}
 			.container {
 				position: absolute;
