@@ -360,7 +360,16 @@
 			right: 0;
 			overflow: hidden;
 			background-repeat: no-repeat;
-			background-image: url(http://localhost/images/mg.jpg);
+		}
+		@media (max-width: 640px) {
+			.bg {
+				background-image: url(http://localhost/images/mg-640.jpg);
+			}
+		}
+		@media (min-width: 641px) {
+			.bg {
+				background-image: url(http://localhost/images/mg.jpg);
+			}
 		}
 		.no-touch .bg {
 			position: fixed;
