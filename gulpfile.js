@@ -4,7 +4,6 @@ var gulp     = require('gulp'),
 	webp     = require('gulp-webp'),
 	uncss    = require('gulp-uncss'),
 	uglify   = require('gulp-uglify'),
-	htmlmin  = require('gulp-htmlmin'),
 	rename   = require('gulp-rename'),
 	compressor = require('gulp-compressor');
 
@@ -33,11 +32,6 @@ gulp
 				html: ['index.html']
 			}))
 			.pipe(gulp.dest('dist'));
-	})
-	.task('htmlmin', function() {
-		gulp.src('index.html')
-		.pipe(htmlmin({collapseWhitespace: true}))
-		.pipe(gulp.dest('dist'))
 	})
 	.task('compressor', function () {
 		gulp.src('index.html')
