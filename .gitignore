@@ -2,3 +2,4 @@
 makefile
 node_modules/
 gulpfile.js
+dist/
