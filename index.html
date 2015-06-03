@@ -723,13 +723,11 @@
       function updateLayout(scrollY) {
         if(scrollY <= 500) {
           opac = 1 - scrollY / 250;
-          gray = scrollY / 6.6667,
           translateY    = scrollY / 1.5 * -1;
           translateYstr = 'translateY(' + translateY + '%)';
         }
         else {
           opac = 0;
-          gray = 75;
           translateYstr = 'translateY(100%)';
           mgBody.classList.remove('loading');
         }
@@ -740,7 +738,6 @@
         mgName.style.OTransform      = translateYstr;
         mgName.style.msTransform     = translateYstr;
         mgName.style.transform       = translateYstr;
-        mgBg.setAttribute('style', '-webkit-filter: grayscale('+ gray +'%)');
       }
 
       if(!Modernizr.touch) {
