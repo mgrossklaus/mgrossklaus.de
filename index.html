@@ -430,15 +430,50 @@
     .no-touch .name::after {
       content: '';
       display: block;
-      width: 0;
-      height: 0;
+      width: .35em;
+      height: .35em;
       overflow: hidden;
-      border: .2em solid transparent;
-      border-top-color: #fff;
+      border: 0 solid #fff;
+      border-width: 0 1px 1px 0;
       position: absolute;
       left: 50%;
       bottom: -150%;
       margin-left: -.2em;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      -webkit-animation: arrow 2s ease-out infinite;
+      -moz-animation: arrow 2s ease-out infinite;
+      -ms-animation: arrow 2s ease-out infinite;
+      -o-animation: arrow 2s ease-out infinite;
+      animation: arrow 2s ease-out infinite;
+    }
+    @-webkit-keyframes arrow {
+      from { opacity: 0; }
+      50%  { opacity: 1; }
+      to   { opacity: 0; }
+    }
+    @-moz-keyframes arrow {
+      from { opacity: 0; }
+      50%  { opacity: 1; }
+      to   { opacity: 0; }
+    }
+    @-ms-keyframes arrow {
+      from { opacity: 0; }
+      50%  { opacity: 1; }
+      to   { opacity: 0; }
+    }
+    @-o-keyframes arrow {
+      from { opacity: 0; }
+      50%  { opacity: 1; }
+      to   { opacity: 0; }
+    }
+    @keyframes arrow {
+      from { opacity: 0; }
+      50%  { opacity: 1; }
+      to   { opacity: 0; }
     }
     .name {
       font-weight: 100;
