@@ -300,7 +300,7 @@
       color: #aaa;
       background: #111;
     }
-    body:after {
+    body::after {
       content: '';
       display: block;
       position: absolute;
@@ -323,7 +323,7 @@
       -o-animation: loading 1.5s linear infinite;
       animation: loading 1.5s linear infinite;
     }
-    .touch body:after {
+    .touch body::after {
       top: 25%;
     }
     @-webkit-keyframes loading {
@@ -427,7 +427,7 @@
     .touch .name {
       position: absolute;
     }
-    .no-touch .name:after {
+    .no-touch .name::after {
       content: '';
       display: block;
       width: 0;
@@ -458,9 +458,6 @@
   </style>
   <link rel="canonical" href="https://www.mgrossklaus.de/">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <!--[if lt IE 9]>
-  <script src="/js/html5.min.js"></script>
-  <![endif]-->
 </head>
 <body itemscope itemtype="http://data-vocabulary.org/Person">
 
