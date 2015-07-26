@@ -6,242 +6,6 @@
   <meta name="description" content="i'm a freelancing frontend-developer based in hamburg, germany.">
   <meta name="keywords" content="front-end, web-development, html, css, javascript, betahaus, hamburg, michael großklaus, design, engineering">
   <meta name="viewport" content="initial-scale=1">
-  <script>
-    /* Modernizr 2.8.3 (Custom Build) | MIT & BSD
-     * Build: http://modernizr.com/download/#-touch-cssclasses-teststyles-prefixes
-     */
-    ;
-
-    window.Modernizr = (function( window, document, undefined ) {
-
-      var version = '2.8.3',
-
-      Modernizr = {},
-
-      enableClasses = true,
-
-      docElement = document.documentElement,
-
-      mod = 'modernizr',
-      modElem = document.createElement(mod),
-      mStyle = modElem.style,
-
-      inputElem  ,
-
-
-      toString = {}.toString,
-
-      prefixes = ' -webkit- -moz- -o- -ms- '.split(' '),
-
-
-
-      tests = {},
-      inputs = {},
-      attrs = {},
-
-      classes = [],
-
-      slice = classes.slice,
-
-      featureName,
-
-
-      injectElementWithStyles = function( rule, callback, nodes, testnames ) {
-
-        var style, ret, node, docOverflow,
-          div = document.createElement('div'),
-            body = document.body,
-            fakeBody = body || document.createElement('body');
-
-        if ( parseInt(nodes, 10) ) {
-                while ( nodes-- ) {
-            node = document.createElement('div');
-            node.id = testnames ? testnames[nodes] : mod + (nodes + 1);
-            div.appendChild(node);
-          }
-        }
-
-            style = ['&#173;','<style id="s', mod, '">', rule, '</style>'].join('');
-        div.id = mod;
-          (body ? div : fakeBody).innerHTML += style;
-        fakeBody.appendChild(div);
-        if ( !body ) {
-            fakeBody.style.background = '';
-            fakeBody.style.overflow = 'hidden';
-          docOverflow = docElement.style.overflow;
-          docElement.style.overflow = 'hidden';
-          docElement.appendChild(fakeBody);
-        }
-
-        ret = callback(div, rule);
-        if ( !body ) {
-          fakeBody.parentNode.removeChild(fakeBody);
-          docElement.style.overflow = docOverflow;
-        } else {
-          div.parentNode.removeChild(div);
-        }
-
-        return !!ret;
-
-      },
-      _hasOwnProperty = ({}).hasOwnProperty, hasOwnProp;
-
-      if ( !is(_hasOwnProperty, 'undefined') && !is(_hasOwnProperty.call, 'undefined') ) {
-        hasOwnProp = function (object, property) {
-        return _hasOwnProperty.call(object, property);
-        };
-      }
-      else {
-        hasOwnProp = function (object, property) {
-        return ((property in object) && is(object.constructor.prototype[property], 'undefined'));
-        };
-      }
-
-
-      if (!Function.prototype.bind) {
-        Function.prototype.bind = function bind(that) {
-
-        var target = this;
-
-        if (typeof target != "function") {
-          throw new TypeError();
-        }
-
-        var args = slice.call(arguments, 1),
-          bound = function () {
-
-          if (this instanceof bound) {
-
-            var F = function(){};
-            F.prototype = target.prototype;
-            var self = new F();
-
-            var result = target.apply(
-              self,
-              args.concat(slice.call(arguments))
-            );
-            if (Object(result) === result) {
-              return result;
-            }
-            return self;
-
-          } else {
-
-            return target.apply(
-              that,
-              args.concat(slice.call(arguments))
-            );
-
-          }
-
-        };
-
-        return bound;
-        };
-      }
-
-      function setCss( str ) {
-        mStyle.cssText = str;
-      }
-
-      function setCssAll( str1, str2 ) {
-        return setCss(prefixes.join(str1 + ';') + ( str2 || '' ));
-      }
-
-      function is( obj, type ) {
-        return typeof obj === type;
-      }
-
-      function contains( str, substr ) {
-        return !!~('' + str).indexOf(substr);
-      }
-
-
-      function testDOMProps( props, obj, elem ) {
-        for ( var i in props ) {
-          var item = obj[props[i]];
-          if ( item !== undefined) {
-
-                  if (elem === false) return props[i];
-
-                  if (is(item, 'function')){
-                    return item.bind(elem || obj);
-            }
-
-                  return item;
-          }
-        }
-        return false;
-      }
-      tests['touch'] = function() {
-        var bool;
-
-        if(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
-          bool = true;
-        } else {
-          injectElementWithStyles(['@media (',prefixes.join('touch-enabled),('),mod,')','{#modernizr{top:9px;position:absolute}}'].join(''), function( node ) {
-          bool = node.offsetTop === 9;
-          });
-        }
-
-        return bool;
-      };
-      for ( var feature in tests ) {
-        if ( hasOwnProp(tests, feature) ) {
-                      featureName  = feature.toLowerCase();
-          Modernizr[featureName] = tests[feature]();
-
-          classes.push((Modernizr[featureName] ? '' : 'no-') + featureName);
-        }
-      }
-
-
-
-       Modernizr.addTest = function ( feature, test ) {
-         if ( typeof feature == 'object' ) {
-         for ( var key in feature ) {
-           if ( hasOwnProp( feature, key ) ) {
-           Modernizr.addTest( key, feature[ key ] );
-           }
-         }
-         } else {
-
-         feature = feature.toLowerCase();
-
-         if ( Modernizr[feature] !== undefined ) {
-                            return Modernizr;
-         }
-
-         test = typeof test == 'function' ? test() : test;
-
-         if (typeof enableClasses !== "undefined" && enableClasses) {
-           docElement.className += ' ' + (test ? '' : 'no-') + feature;
-         }
-         Modernizr[feature] = test;
-
-         }
-
-         return Modernizr;
-       };
-
-
-      setCss('');
-      modElem = inputElem = null;
-
-
-      Modernizr._version      = version;
-
-      Modernizr._prefixes     = prefixes;
-
-      Modernizr.testStyles    = injectElementWithStyles;    docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') +
-
-                              (enableClasses ? ' js ' + classes.join(' ') : '');
-
-      return Modernizr;
-
-    })(this, this.document);
-    ;
-  </script>
   <style>
     /* http://meyerweb.com/eric/tools/css/reset/
        v2.0 | 20110126
@@ -285,92 +49,36 @@
       min-height: 100%;
     }
     @font-face {
-      font-family: 'Raleway';
-      src: url('/fonts/raleway-extralight-webfont.eot');
-      src: url('/fonts/raleway-extralight-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/raleway-extralight-webfont.woff2') format('woff2'),
-         url('/fonts/raleway-extralight-webfont.woff') format('woff'),
-         url('/fonts/raleway-extralight-webfont.ttf') format('truetype'),
-         url('/fonts/raleway-extralight-webfont.svg#ralewayextralight') format('svg');
-      font-weight: normal;
+      font-family: 'Roboto Slab';
       font-style: normal;
+      font-weight: 400;
+      src:  local('Roboto Slab Regular'),
+            local('RobotoSlab-Regular'),
+            url(https://fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37Zogp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2'),
+            url(https://fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37ZrrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+    }
+    html {
+      background-color: #222;
     }
     body {
-      font: .925em/1.5em 'Raleway', Helvetica, Arial, Verdana, sans-serif;
+      font: .925rem/1.5rem 'Roboto Slab', Helvetica, Arial, Verdana, sans-serif;
       color: #aaa;
-      background: #111;
     }
-    body::after {
-      content: '';
-      display: block;
-      position: absolute;
-      z-index: -1;
-      top: 50%;
-      left: 50%;
-      margin: -1em 0 0 -1em;
-      width: 2em;
-      height: 2em;
-      border: .25em solid transparent;
-      border-right-color: #fff;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      -o-border-radius: 50%;
-      border-radius: 50%;
-      -webkit-animation: loading 1.5s linear infinite;
-      -moz-animation: loading 1.5s linear infinite;
-      -ms-animation: loading 1.5s linear infinite;
-      -o-animation: loading 1.5s linear infinite;
-      animation: loading 1.5s linear infinite;
-    }
-    .touch body::after {
-      top: 25%;
-    }
-    @-webkit-keyframes loading {
-      from { -webkit-transform: rotate(0deg);   opacity: .2; }
-      50%  { -webkit-transform: rotate(180deg); opacity: 1; }
-      to   { -webkit-transform: rotate(360deg); opacity: .2; }
-    }
-    @-moz-keyframes loading {
-      from { -moz-transform: rotate(0deg);   opacity: .2; }
-      50%  { -moz-transform: rotate(180deg); opacity: 1; }
-      to   { -moz-transform: rotate(360deg); opacity: .2; }
-    }
-    @-ms-keyframes loading {
-      from { -ms-transform: rotate(0deg);   opacity: .2; }
-      50%  { -ms-transform: rotate(180deg); opacity: 1; }
-      to   { -ms-transform: rotate(360deg); opacity: .2; }
-    }
-    @-o-keyframes loading {
-      from { -o-transform: rotate(0deg);   opacity: .2; }
-      50%  { -o-transform: rotate(180deg); opacity: 1; }
-      to   { -o-transform: rotate(360deg); opacity: .2; }
-    }
-    @keyframes loading {
-      from { transform: rotate(0deg);   opacity: .2; }
-      50%  { transform: rotate(180deg); opacity: 1; }
-      to   { transform: rotate(360deg); opacity: .2; }
+    a {
+      color: #ccc;
+      -webkit-transition: color .2s ease;
+      -moz-transition: color .2s ease;
+      -ms-transition: color .2s ease;
+      -o-transition: color .2s ease;
+      transition: color .2s ease;
+      text-decoration: none;
+      border-bottom: 1px dotted;
     }
     .bg {
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      overflow: hidden;
+      background-image:
+        linear-gradient(45deg, rgba(255,0,0,.15), rgba(0,255,255,.15)),
+        linear-gradient(-45deg, rgba(255,255,0,.15), rgba(0,0,255,.15));
       background-repeat: no-repeat;
-    }
-    @media (max-width: 640px) {
-      .bg {
-        background-image: url(/images/mg-640.jpg);
-      }
-    }
-    @media (min-width: 641px) {
-      .bg {
-        background-image: url(/images/mg.jpg);
-      }
-    }
-    .no-touch .bg {
-      position: fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -ms-background-size: cover;
@@ -378,116 +86,128 @@
       background-size: cover;
       background-position: center;
     }
-    .touch .bg {
-      position: absolute;
-      -webkit-background-size: 100% auto;
-      -moz-background-size: 100% auto;
-      -ms-background-size: 100% auto;
-      -o-background-size: 100% auto;
-      background-size: 100% auto;
-      background-position: top;
-    }
-    .no-touch .container {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 100%;
-    }
-    .touch .mg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 2;
-    }
-    .content {
-      position: relative;
+    .container {
       z-index: 1;
-      background: #222;
-      background: rgba(0,0,0,.65);
-      padding: 4em;
+      overflow: hidden;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -ms-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+      opacity: 0;
     }
-    .touch .content {
-      position: absolute;
-      top: 100%;
-    }
-    .name {
-      font-size: 4em;
-      line-height: 1em;
-      z-index: 1;
-      text-align: center;
-      cursor: default;
-      top: 75%;
-      left: 0;
-      right: 0;
-      position: fixed;
-      z-index: 1;
-    }
-    .touch .name {
-      position: absolute;
-    }
-    .no-touch .name::after {
+    .container::after {
       content: '';
       display: block;
-      width: .35em;
-      height: .35em;
-      overflow: hidden;
-      border: 0 solid #fff;
-      border-width: 0 1px 1px 0;
       position: absolute;
-      left: 50%;
-      bottom: -150%;
-      margin-left: -.2em;
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-      -webkit-animation: arrow 2s ease-out infinite;
-      -moz-animation: arrow 2s ease-out infinite;
-      -ms-animation: arrow 2s ease-out infinite;
-      -o-animation: arrow 2s ease-out infinite;
-      animation: arrow 2s ease-out infinite;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      -webkit-transform: skewY(-3deg);
+      -moz-transform: skewY(-3deg);
+      -ms-transform: skewY(-3deg);
+      -o-transform: skewY(-3deg);
+      transform: skewY(-3deg);
+      -webkit-transform-origin: top right;
+      -moz-transform-origin: top right;
+      -ms-transform-origin: top right;
+      -o-transform-origin: top right;
+      transform-origin: top right;
+      background: #222;
+      background: rgba(0,0,0,.65);
     }
-    @-webkit-keyframes arrow {
-      from { opacity: 0; }
-      50%  { opacity: 1; }
-      to   { opacity: 0; }
-    }
-    @-moz-keyframes arrow {
-      from { opacity: 0; }
-      50%  { opacity: 1; }
-      to   { opacity: 0; }
-    }
-    @-ms-keyframes arrow {
-      from { opacity: 0; }
-      50%  { opacity: 1; }
-      to   { opacity: 0; }
-    }
-    @-o-keyframes arrow {
-      from { opacity: 0; }
-      50%  { opacity: 1; }
-      to   { opacity: 0; }
-    }
-    @keyframes arrow {
-      from { opacity: 0; }
-      50%  { opacity: 1; }
-      to   { opacity: 0; }
+    .content {
+      margin: 0 auto;
+      max-width: 76rem;
     }
     .name {
+      font-size: 2.5rem;
+      line-height: 1em;
       font-weight: 100;
-      font-size: 3em;
+      color: #fff;
+      padding: .25rem 0;
+      overflow: hidden;
+    }
+    .name em {
+      color: #aaa;
+      display: inline-block;
+      float: right;
+    }
+    .introduction {
+      float: left;
+    }
+    .keywords {
+      overflow: hidden;
+    }
+    .keywords--introduction {
+      float: right;
+    }
+    .keyword {
+      float: left;
+      list-style: none;
+      margin: 0;
       color: #fff;
     }
-    @media (max-width: 40em) {
+    .keyword::after {
+      content: '/';
+      display: inline;
+      padding: 0 .5rem;
+      color: #999;
+    }
+    .keyword:last-child::after {
+      content: none;
+      display: none;
+      visibility: hidden;
+      padding: 0;
+    }
+    p, ul, ol, address {
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 48rem) {
+      .bg {
+        position: static;
+        height: 66.875vw;
+        background-image: url(/images/mg-640.jpg);
+      }
+      .container {
+        margin: -2.75rem 0 0;
+        padding: 4rem 2rem 2rem;
+        position: relative;
+      }
       .name {
-        font-size: 3em;
+        font-size: 2rem;
+        margin: 0 0 2rem;
+      }
+      .name em {
+        margin: 1rem 0 0;
       }
     }
-    @media (orientation: portrait) and (max-width: 40em) {
-      .touch .name {
-        top: 60%;
+    @media (min-width: 48.0001rem) {
+      .container {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        padding: 7rem 4rem 4rem;
+        margin: -14rem 0 0;
+      }
+      .name {
+        margin: 0 0 4rem;
+      }
+      .name em {
+        margin-left: 1rem;
+      }
+      .bg {
+        position: fixed;
+        z-index: 1;
+        background-image: url(/images/mg.jpg);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
       }
     }
   </style>
@@ -495,295 +215,212 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body itemscope itemtype="http://data-vocabulary.org/Person">
+  <div class="bg"></div>
+  <div class="container">
+  <div class="content">
+    <section>
+      <h1 id="name" class="name" itemprop="name">Michael Großklaus <em>freelancing frontend-developer</em></h1>
 
-  <div class="container" id="container">
+      <p class="introduction">
+        Hi. I'm a <span itemprop="title">freelancing frontend-developer</span> based in Hamburg, Germany.<br>
+        At the moment I am developing the <a href="https://www.xing.com/news">XING News</a> for my client <a href="http://www.njiuko.com">njiuko.com</a>.
+      </p>
 
-    <div class="mg" id="mg">
-      <div class="bg" id="bg"></div>
-      <h1 id="name" class="name" itemprop="name">Michael Großklaus</h1>
-    </div>
+      <ul class="keywords keywords--introduction">
+        <li class="keyword">html</li>
+        <li class="keyword">css</li>
+        <li class="keyword">javascript</li>
+        <li class="keyword">jquery</li>
+        <li class="keyword">responsive</li>
+        <li class="keyword">mobile</li>
+      </ul>
 
-    <div class="content">
-      <section>
-        <h2>
-          freelancing frontend-developer<br>
-          <span>html, css &amp; javascript</span>
-        </h2>
+    </section>
 
-        <p>
-          Hi. I'm a <span itemprop="title">freelancing frontend-developer</span> based in Hamburg, Germany.<br>
-          At the moment I am developing the <a href="https://www.xing.com/news">XING News</a> for my client <a href="http://www.njiuko.com">njiuko.com</a>.
-        </p>
+    <section class="work">
+      <h2>Work</h2>
 
-        <ul class="keywords">
-          <li class="keyword">html</li>
-          <li class="keyword">css</li>
-          <li class="keyword">javascript</li>
-          <li class="keyword">jquery</li>
-          <li class="keyword">responsive</li>
-          <li class="keyword">mobile</li>
-        </ul>
-
-      </section>
-
-      <section class="work">
-        <h2>Work</h2>
-
-        <h3>jQuery Plugins</h3>
-        <ul class="projects projects--current">
-          <li>
-            <h4>Tiling</h4>
-            <a href="https://github.com/mgrossklaus/tiling" target="_blank">github.com/mgrossklaus/tiling</a> (example: <a href="https://tiling.mgrossklaus.de" target="_blank">tiling.mgrossklaus.de</a>)
-          </li>
-          <li>
-            <h4>Odd Even Timeline</h4>
-            <a href="https://github.com/mgrossklaus/odd-even-timeline" target="_blank">github.com/mgrossklaus/odd-even-timeline</a> (example: <a href="https://oddeven.mgrossklaus.de" target="_blank">oddeven.mgrossklaus.de</a>)
-          </li>
-        </ul>
-
-        <h3>Current project</h3>
-        <ul class="projects">
-          <li class="project">
-            <h4>XING News</h4>
-            <p>
-              <a href="https://www.xing.com/news" target="_blank">xing.com/news</a>
-              <small>HTML / CSS / JS</small>
-            </p>
-          </li>
-        </ul>
-
-        <h3>Recent projects</h3>
-        <ul class="projects">
-          <li class="project">
-            <h4>Louis Mobile</h4>
-            <p>
-              <a href="https://m.louis.de" target="_blank">m.louis.de</a>
-              <small>HTML / CSS / JS / frontend architecture &amp; development</small>
-            </p>
-          </li>
-          <li class="project">
-            <h4>Louis</h4>
-            <p>
-              <a href="https://www.louis.de" target="_blank">louis.de</a>
-              <small>HTML / CSS / JS / complete frontend architecture &amp; development</small>
-            </p>
-          </li>
-          <li class="project">
-            <h4>DEAR Photography</h4>
-            <p>
-              <a href="http://www.dearphotography.com" target="_blank">dearphotography.com</a>
-              <small>HTML / CSS / JS</small>
-            </p>
-          </li>
-          <li class="project">
-            <h4>finmar</h4>
-            <p>
-              <a href="https://www.finmar.com" target="_blank">finmar.com</a>
-              <small>HTML / CSS / JS</small>
-            </p>
-          </li>
-          <li class="project">
-            <h4>Erfahrungen.com</h4>
-            <p>
-              <a href="http://www.erfahrungen.com" target="_blank">erfahrungen.com</a>
-              <small>HTML / CSS / JS</small>
-            </p>
-          </li>
-          <li class="project">
-            <h4>Aparthotel Am Meer Cuxhaven, Duhnen</h4>
-            <p>
-              <a href="http://www.aparthotel-am-meer.de" target="_blank">aparthotel-am-meer.de</a>
-              <small>HTML / CSS / JS / CMS</small>
-            </p>
-          </li>
-          <li class="project">
-            <h4>Three-Headed Monkeys</h4>
-            <p>
-              <a href="http://www.threeheadedmonkeys.com" target="_blank">threeheadedmonkeys.com</a>
-              <small>HTML / CSS / JS / CMS</small>
-            </p>
-          </li>
-          <li class="project">
-            <h4>Gazelle Hamburg</h4>
-            <p>
-              <a href="http://www.gazelle-hamburg.de" target="_blank">gazelle-hamburg.de</a>
-              <small>HTML / CSS / JS</small>
-            </p>
-          </li>
-          <li class="project">
-            <h4>Brompton Store Hamburg</h4>
-            <p>
-              <a href="http://hamburg.brompton.de" target="_blank">hamburg.brompton.de</a>
-              <small>HTML / CSS / JS</small>
-            </p>
-          </li>
-          <li class="project">
-            <h4>Bewegungstraum</h4>
-            <p>
-              <a href="http://www.bewegungstraum.com" target="_blank">bewegungstraum.com</a>
-              <small>HTML / CSS / JS / CMS</small>
-            </p>
-          </li>
-          <li class="project project--offline">
-            <h4>Offensive: Bürokratieabbau</h4>
-            <p>
-              offline: <a href="http://www.offensive-buerokratieabbau.de" target="_blank">offensive-buerokratieabbau.de</a>
-              <small>Layout / HTML / CSS / CMS</small>
-            </p>
-          </li>
-          <li class="project">
-            <h4>CoSA Research Group</h4>
-            <p>
-              <a href="http://www.cosa.fh-luebeck.de" target="_blank">cosa.fh-luebeck.de</a>
-              <small>XHTML / CSS / CMS</small>
-            </p>
-          </li>
-        </ul>
-
-        <h3>Recent clients</h3>
-        <p>
-          I mainly work on large projects, but due to contract conditions I'm not allowed to list all major projects.<br>
-          So here is a partial list of further clients.
-        </p>
-        <ul class="projects">
-          <li class="project">
-            <h4>Njiuko</h4>
-            <p><a href="http://www.njiuko.com" target="_blank">njiuko.com</a></p>
-          </li>
-          <li class="project">
-            <h4>Louis Fun Company</h4>
-            <p><a href="https://www.louis.de" target="_blank">louis.de</a></p>
-          </li>
-          <li class="project">
-            <h4>Fork Unstable Media</h4>
-            <p><a href="http://www.fork.de" target="_blank">fork.de</a></p>
-          </li>
-          <li class="project">
-            <h4>Planungsbüro für Internet &amp; Marketing</h4>
-            <p><a href="http://www.planungsbuero.eu" target="_blank">planungsbuero.eu</a></p>
-          </li>
-        </ul>
-      </section>
-
-      <section>
-
-        <h2>Experience</h2>
-        <ul>
-          <li>
-            <h4>freelancing frontend developer</h4>
-            <p><small>since 12/2011</small></p>
-          </li>
-          <li>
-            <h4>
-              graduated engineer for information technology and design<br>
-              <span>(fh lübeck, university of applied sciences)</span>
-            </h4>
-            <p><small>since 12/2011</small></p>
-          </li>
-          <li>
-            <h4>web-developer / designer at <a target="_blank" href="http://www.evenmedia.de">evenmedia.de</a></h4>
-            <p><small>from 2008 - 2011</small></p>
-          </li>
-          <li>
-            <h4>web-developer / designer at <a target="_blank" href="http://www.brandorange.de">brandorange.de</a></h4>
-            <p><small>from 2007 - 2008</small></p>
-          </li>
-        </ul>
-
-      </section>
-
-      <section class="contact">
-        <h2>Contact</h2>
-
-        <div class="contact__type">
-          <h3>Online</h3>
-          <ul class="keywords">
-            <li class="keyword"><a target="_blank" href="http://www.xing.com/profile/Michael_Grossklaus" title="view my xing profile">xing</a></li>
-            <li class="keyword"><a target="_blank" href="http://www.twitter.com/mgrossklaus" title="view my twitter profile">twitter</a></li>
-            <li class="keyword"><a href="https://github.com/mgrossklaus" target="_blank" title="view my github profile">github</a></li>
-          </ul>
+      <h3>Current project</h3>
+      <ul class="projects">
+        <li class="project">
+          <h4>XING News</h4>
           <p>
-            <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;">&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;</a><br>
-            GPG Fingerprint:<br>
-            D280 DBED E8CB F799 0D04<br>
-            E32B 0CCC 38E4 E0DA 8EE3
+            <a href="https://www.xing.com/news" target="_blank">xing.com/news</a>
+            <small>HTML / CSS / JS</small>
           </p>
-        </div>
+        </li>
+      </ul>
 
-        <div class="contact__type">
-          <h3>Offline</h3>
-          <address itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
-            Michael Großklaus<br>
-            <span itemprop="street-address">
-              Scheideweg 6
-            </span><br>
-            <span itemprop="postal-code">20253</span> <span itemprop="city">Hamburg</span><br>
-            <span itemprop="country-name">Germany</span>
-          </address>
-        </div>
+      <h3>Recent projects</h3>
+      <ul class="projects">
+        <li class="project">
+          <h4>Louis Mobile</h4>
+          <p>
+            <a href="https://m.louis.de" target="_blank">m.louis.de</a>
+            <small>HTML / CSS / JS / frontend architecture &amp; development</small>
+          </p>
+        </li>
+        <li class="project">
+          <h4>Louis</h4>
+          <p>
+            <a href="https://www.louis.de" target="_blank">louis.de</a>
+            <small>HTML / CSS / JS / complete frontend architecture &amp; development</small>
+          </p>
+        </li>
+        <li class="project">
+          <h4>DEAR Photography</h4>
+          <p>
+            <a href="http://www.dearphotography.com" target="_blank">dearphotography.com</a>
+            <small>HTML / CSS / JS</small>
+          </p>
+        </li>
+        <li class="project">
+          <h4>finmar</h4>
+          <p>
+            <a href="https://www.finmar.com" target="_blank">finmar.com</a>
+            <small>HTML / CSS / JS</small>
+          </p>
+        </li>
+        <li class="project">
+          <h4>Erfahrungen.com</h4>
+          <p>
+            <a href="http://www.erfahrungen.com" target="_blank">erfahrungen.com</a>
+            <small>HTML / CSS / JS</small>
+          </p>
+        </li>
+        <li class="project">
+          <h4>Aparthotel Am Meer Cuxhaven, Duhnen</h4>
+          <p>
+            <a href="http://www.aparthotel-am-meer.de" target="_blank">aparthotel-am-meer.de</a>
+            <small>HTML / CSS / JS / CMS</small>
+          </p>
+        </li>
+        <li class="project">
+          <h4>Three-Headed Monkeys</h4>
+          <p>
+            <a href="http://www.threeheadedmonkeys.com" target="_blank">threeheadedmonkeys.com</a>
+            <small>HTML / CSS / JS / CMS</small>
+          </p>
+        </li>
+        <li class="project">
+          <h4>Gazelle Hamburg</h4>
+          <p>
+            <a href="http://www.gazelle-hamburg.de" target="_blank">gazelle-hamburg.de</a>
+            <small>HTML / CSS / JS</small>
+          </p>
+        </li>
+        <li class="project">
+          <h4>Brompton Store Hamburg</h4>
+          <p>
+            <a href="http://hamburg.brompton.de" target="_blank">hamburg.brompton.de</a>
+            <small>HTML / CSS / JS</small>
+          </p>
+        </li>
+        <li class="project">
+          <h4>Bewegungstraum</h4>
+          <p>
+            <a href="http://www.bewegungstraum.com" target="_blank">bewegungstraum.com</a>
+            <small>HTML / CSS / JS / CMS</small>
+          </p>
+        </li>
+        <li class="project project--offline">
+          <h4>Offensive: Bürokratieabbau</h4>
+          <p>
+            offline: <a href="http://www.offensive-buerokratieabbau.de" target="_blank">offensive-buerokratieabbau.de</a>
+            <small>Layout / HTML / CSS / CMS</small>
+          </p>
+        </li>
+        <li class="project">
+          <h4>CoSA Research Group</h4>
+          <p>
+            <a href="http://www.cosa.fh-luebeck.de" target="_blank">cosa.fh-luebeck.de</a>
+            <small>XHTML / CSS / CMS</small>
+          </p>
+        </li>
+      </ul>
 
+      <h3>Recent clients</h3>
+      <p>
+        I mainly work on large projects, but due to contract conditions I'm not allowed to list all major projects.<br>
+        So here is a partial list of further clients.
+      </p>
+      <ul class="projects">
+        <li class="project">
+          <h4>Njiuko</h4>
+          <p><a href="http://www.njiuko.com" target="_blank">njiuko.com</a></p>
+        </li>
+        <li class="project">
+          <h4>Louis Fun Company</h4>
+          <p><a href="https://www.louis.de" target="_blank">louis.de</a></p>
+        </li>
+        <li class="project">
+          <h4>Fork Unstable Media</h4>
+          <p><a href="http://www.fork.de" target="_blank">fork.de</a></p>
+        </li>
+        <li class="project">
+          <h4>Planungsbüro für Internet &amp; Marketing</h4>
+          <p><a href="http://www.planungsbuero.eu" target="_blank">planungsbuero.eu</a></p>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+
+      <h2>Experience</h2>
+      <ul>
+        <li>
+          <h4>freelancing frontend developer</h4>
+          <p><small>since 12/2011</small></p>
+        </li>
+        <li>
+          <h4>
+            graduated engineer for information technology and design<br>
+            <span>(fh lübeck, university of applied sciences)</span>
+          </h4>
+          <p><small>since 12/2011</small></p>
+        </li>
+        <li>
+          <h4>web-developer / designer at <a target="_blank" href="http://www.evenmedia.de">evenmedia.de</a></h4>
+          <p><small>from 2008 - 2011</small></p>
+        </li>
+        <li>
+          <h4>web-developer / designer at <a target="_blank" href="http://www.brandorange.de">brandorange.de</a></h4>
+          <p><small>from 2007 - 2008</small></p>
+        </li>
+      </ul>
+
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+
+      <div class="contact__type">
+        <h3>Online</h3>
+        <ul class="keywords">
+          <li class="keyword"><a target="_blank" href="http://www.xing.com/profile/Michael_Grossklaus" title="view my xing profile">xing</a></li>
+          <li class="keyword"><a target="_blank" href="http://www.twitter.com/mgrossklaus" title="view my twitter profile">twitter</a></li>
+          <li class="keyword"><a href="https://github.com/mgrossklaus" target="_blank" title="view my github profile">github</a></li>
+        </ul>
+        <p>
+          <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;">&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;</a> (GPG Fingerprint: D280 DBED E8CB F799 0D04 E32B 0CCC 38E4 E0DA 8EE3)
+        </p>
+      </div>
+
+      <div class="contact__type">
+        <h3>Offline</h3>
+        <address itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
+          Michael Großklaus / <span itemprop="street-address">Scheideweg 6</span> / <span itemprop="postal-code">20253</span> <span itemprop="city">Hamburg</span>, <span itemprop="country-name">Germany</span>
+        </address>
         <p class="legal">
           <small>
-            USt.-Id.-Nr.: DE279812974<br>
-            Finanzamt Hamburg-Hansa
+            USt.-Id.-Nr.: DE279812974 / Finanzamt Hamburg-Hansa
           </small>
         </p>
-      </section>
-    </div>
+      </div>
+    </section>
+  </div>
   </div>
   <script>
-    document.addEventListener('DOMContentLoaded', function(event) {
-
-      var mg      = document.getElementById('mg'),
-          mgName  = document.getElementById('name'),
-          mgBody  = document.getElementById('mgrossklaus-de'),
-          mgBg    = document.getElementById('bg'),
-          scrollY = window.pageYOffset,
-          bgImg   = new Image(),
-          loaded  = false;
-
-      window.requestAnimFrame = (function(){
-        return  window.requestAnimationFrame       ||
-                window.webkitRequestAnimationFrame ||
-                window.mozRequestAnimationFrame    ||
-                function(callback) {
-                  window.setTimeout(callback, 1000 / 60);
-                };
-      }());
-
-
-      function updateLayout(scrollY) {
-        if(scrollY <= 500) {
-          opac = 1 - scrollY / 250;
-          translateY    = scrollY / 1.5 * -1;
-          translateYstr = 'translateY(' + translateY + '%)';
-        }
-        else {
-          opac = 0;
-          translateYstr = 'translateY(100%)';
-          mgBody.classList.remove('loading');
-        }
-
-        mgName.style.opacity         = opac;
-        mgName.style.MozTransform    = translateYstr;
-        mgName.style.webkitTransform = translateYstr;
-        mgName.style.OTransform      = translateYstr;
-        mgName.style.msTransform     = translateYstr;
-        mgName.style.transform       = translateYstr;
-      }
-
-      if(!Modernizr.touch) {
-
-        updateLayout(scrollY);
-
-        (function bgloop(){
-          requestAnimFrame(bgloop);
-          scrollY = window.pageYOffset;
-          updateLayout(scrollY);
-        })();
-      }
-    });
-
     /*!
     loadCSS: load a CSS file asynchronously.
     [c]2014 @scottjehl, Filament Group, Inc.
@@ -816,24 +453,6 @@
   </script>
   <noscript>
     <link rel="stylesheet" href="/css/styles.min.css">
-    <style>
-      .bg {
-        position: fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -ms-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        background-position: center;
-        background-image: url(/images/mg.jpg);
-      }
-      .container {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 100%;
-      }
-    </style>
   </noscript>
 </body>
 </html>
