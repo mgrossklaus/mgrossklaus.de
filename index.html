@@ -1,459 +1,460 @@
 <!DOCTYPE html>
-<html lang="en" id="mgrossklaus-de">
-<head>
-  <meta charset="utf-8">
-  <title>Michael Großklaus - freelancing frontend-developer Hamburg</title>
-  <meta name="description" content="I'm a freelancing frontend-developer based in Hamburg, Germany. You can hire me for HTML, CSS and JavaScript jobs.">
-  <meta name="keywords" content="front-end, web-development, html, css, javascript, betahaus, hamburg, michael großklaus, design, engineering">
-  <meta name="viewport" content="initial-scale=1">
-  <style>
-    /* http://meyerweb.com/eric/tools/css/reset/
-       v2.0 | 20110126
-       License: none (public domain)
-    */
-    html, body, div, span, applet, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    small, strike, strong, sub, sup, tt, var,
-    b, u, i, center,
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed,
-    figure, figcaption, footer, header, hgroup,
-    menu, nav, output, ruby, section, summary,
-    time, mark, audio, video {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      font-size: 100%;
-      font: inherit;
-      vertical-align: baseline;
-    }
-    /* HTML5 display-role reset for older browsers */
-    article, aside, details, figcaption, figure,
-    footer, header, hgroup, menu, nav, section {
-      display: block;
-    }
-    body {
-      line-height: 1;
-    }
-    ol, ul {
-      list-style: none;
-    }
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Michael Großklaus - Freelancing frontend-developer Hamburg</title>
+    <meta name="description" content="I'm a freelancing frontend-developer based in Hamburg, Germany. You can hire me for HTML, CSS and JavaScript jobs.">
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="canonical" href="https://www.mgrossklaus.de/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
-    /* mgrossklaus.de */
-    html,
-    body {
-      min-height: 100%;
-    }
-    @font-face {
-      font-family: 'Roboto Slab';
-      font-style: normal;
-      font-weight: 400;
-      src:  local('Roboto Slab Regular'),
-            local('RobotoSlab-Regular'),
-            url(https://fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37Zogp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2'),
-            url(https://fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37ZrrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
-    }
-    html {
-      background-color: #222;
-    }
-    body {
-      font: .925rem/1.5rem 'Roboto Slab', Helvetica, Arial, Verdana, sans-serif;
-      font-variant-ligatures: common-ligatures;
-      color: #aaa;
-    }
-    a {
-      color: #ccc;
-      -webkit-transition: color .2s ease;
-      -moz-transition: color .2s ease;
-      -ms-transition: color .2s ease;
-      -o-transition: color .2s ease;
-      transition: color .2s ease;
-      text-decoration: none;
-      border-bottom: 1px dotted;
-    }
-    .bg {
-      background-image:
-        linear-gradient(45deg, rgba(255,0,0,.15), rgba(0,255,255,.15)),
-        linear-gradient(-45deg, rgba(255,255,0,.15), rgba(0,0,255,.15));
-      background-repeat: no-repeat;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -ms-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      background-position: center;
-    }
-    .container {
-      z-index: 1;
-      overflow: hidden;
-      -webkit-transition: all .5s ease-in-out;
-      -moz-transition: all .5s ease-in-out;
-      -ms-transition: all .5s ease-in-out;
-      -o-transition: all .5s ease-in-out;
-      transition: all .5s ease-in-out;
-      opacity: 0;
-    }
-    .container::after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: -1;
-      -webkit-transform: skewY(-3deg);
-      -moz-transform: skewY(-3deg);
-      -ms-transform: skewY(-3deg);
-      -o-transform: skewY(-3deg);
-      transform: skewY(-3deg);
-      -webkit-transform-origin: top right;
-      -moz-transform-origin: top right;
-      -ms-transform-origin: top right;
-      -o-transform-origin: top right;
-      transform-origin: top right;
-      background: #222;
-      background: rgba(0,0,0,.65);
-    }
-    .content {
-      margin: 0 auto;
-      max-width: 76rem;
-    }
-    .name {
-      font-size: 2.5rem;
-      line-height: 1em;
-      font-weight: 100;
-      color: #fff;
-      padding: .25rem 0;
-      overflow: hidden;
-    }
-    .name em {
-      color: #aaa;
-      display: inline-block;
-      float: right;
-    }
-    .introduction {
-      float: left;
-    }
-    .keywords {
-      overflow: hidden;
-    }
-    .keywords--introduction {
-      float: right;
-    }
-    .keyword {
-      float: left;
-      list-style: none;
-      margin: 0;
-      color: #fff;
-    }
-    .keyword::after {
-      content: '/';
-      display: inline;
-      padding: 0 .5rem;
-      color: #999;
-    }
-    .keyword:last-child::after {
-      content: none;
-      display: none;
-      visibility: hidden;
-      padding: 0;
-    }
-    p, ul, ol, address {
-      margin-bottom: 1.5rem;
-    }
-    @media (max-width: 48rem) {
-      .bg {
-        position: static;
-        height: 66.875vw;
-        background-image: url(/images/mg-640.jpg);
+    <style>
+      /* http://meyerweb.com/eric/tools/css/reset/
+         v2.0 | 20110126
+         License: none (public domain)
+      */
+
+      html, body, div, span, applet, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      a, abbr, acronym, address, big, cite, code,
+      del, dfn, em, img, ins, kbd, q, s, samp,
+      small, strike, strong, sub, sup, tt, var,
+      b, u, i, center,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, embed,
+      figure, figcaption, footer, header, hgroup,
+      menu, nav, output, ruby, section, summary,
+      time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
       }
-      .container {
-        margin: -2.75rem 0 0;
-        padding: 4rem 2rem 2rem;
+      ol, ul {
+        list-style: none;
+      }
+
+      /* https://fonts.googleapis.com/css?family=Roboto+Slab&text=QWERTZUIOPASDFGHJKLYXCVBNMqwertzuiopasdfghjklyxcvbnm%C3%9F1234567890,.-/&() */
+      @font-face {
+        font-family: 'Roboto Slab';
+        font-style: normal;
+        font-weight: 400;
+        src:  local('Roboto Slab Regular'),
+              local('RobotoSlab-Regular'),
+              url(https://fonts.gstatic.com/l/font?kit=3__ulTNA7unv0UtplybPiv1xhz2MoHv50cDeJz-JxZosW74lMOjTY4qiY9y3N8u8mmZZuPEXUm9QhgLwSTQSb8YE374rgrGU5twsryA-dlbdDe2KkaUhCAA7Ju70WAWK&skey=a9ad6a4717e923f0) format('woff2'),
+              url(https://fonts.gstatic.com/s/robotoslab/v6/y7lebkjgREBJK96VQi37ZrrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+      }
+
+      html {
+        font-size: 10px;
+        background-size: cover;
+        padding: 100vh 0 0;
+      }
+
+      body {
+        background: #e5e5e5;
+        font: 1.8rem/1.75 'Roboto Slab', Helvetica, Arial, sans-serif;
+        color: #666;
+      }
+
+      @keyframes fadeIn {
+        from  { opacity: 0; }
+        to    { opacity: 1; }
+      }
+
+      .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: -8rem;
+        z-index: -1;
+        overflow: hidden;
+        background-color: #042128;
+      }
+      .bg__image {
+        width: auto;
+        min-width: 100%;
+        height: auto;
+        min-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+      }
+      .title {
+        position: absolute;
+        bottom: 6vw;
+        left: 7.5vw;
+        right: 7.5vw;
+        font-size: 3.5vw;
+      }
+      .bg__image,
+      .title {
+        animation: fadeIn .5s;
+      }
+      .title__item {
+        background: #fff;
+        padding: 0 .25em;
+      }
+      .title__item--name {
+        color: #85134e;
+      }
+      .title__item--occupation {
+        color: #042229;
+      }
+      .introduction {
+        padding: 0 0 10rem;
+        margin: 0 0 4rem;
+        border-bottom: 1px dashed #ccc;
+      }
+      .content {
+        padding: 7.5vw;
+      }
+      .content--main {
+        background: #f5f5f5;
+        margin: 8rem 0 0;
+        padding-top: 8vw;
+        padding-bottom: 6vw;
         position: relative;
       }
-      .name {
-        font-size: 2rem;
-        margin: 0 0 2rem;
-      }
-      .name em {
-        margin: 1rem 0 0;
-      }
-    }
-    @media (min-width: 48.0001rem) {
-      .container {
+      .content--main::before,
+      .content--main::after {
+        content: '';
+        display: block;
+        background: inherit;
         position: absolute;
+        left: 0;
+        right: 0;
+        height: 8rem;
+      }
+      .content--main::before {
+        bottom: 100%;
+        background: linear-gradient(to bottom right, transparent 50%, #f5f5f5 51%);
+      }
+      .content--main::after {
         top: 100%;
-        left: 0;
-        right: 0;
-        z-index: 2;
-        padding: 7rem 4rem 4rem;
-        margin: -14rem 0 0;
+        background: linear-gradient(to top right, transparent 50%, #f5f5f5 51%);
       }
-      .name {
-        margin: 0 0 4rem;
+      .content--sub {
+        background: #e5e5e5;
       }
-      .name em {
-        margin-left: 1rem;
+      .content--sub a {
+        text-shadow: -0.15em 0 #e5e5e5, 0.15em 0 #e5e5e5;
       }
-      .bg {
-        position: fixed;
-        z-index: 1;
-        background-image: url(/images/mg.jpg);
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-      }
-    }
-  </style>
-  <link rel="canonical" href="https://www.mgrossklaus.de/">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-</head>
-<body itemscope itemtype="http://data-vocabulary.org/Person">
-  <div class="bg"></div>
-  <div class="container">
-  <div class="content">
-    <section>
-      <h1 id="name" class="name" itemprop="name">Michael Großklaus <em>freelancing frontend-developer</em></h1>
 
-      <p class="introduction">
-        Hi. I'm a <span itemprop="title">freelancing frontend-developer</span> based in Hamburg, Germany.<br>
-        At the moment I am developing the <a href="https://www.xing.com/news">XING News</a> for my client <a href="http://www.njiuko.com">njiuko.com</a>.
-      </p>
+      a {
+        color: #85134e;
+        text-decoration: none;
+        background: linear-gradient(#85134e, #85134e) no-repeat;
+        background-size: 100% 1px;
+        background-position: 0 1.25em;
+        text-shadow: -0.15em 0 #fff, 0.15em 0 #fff;
+        transition: all .2s ease;
+        position: relative;
+        padding: .05em .2em 0;
+        margin: 0 -.1em;
+      }
+      a:hover,
+      a:active {
+        color: #fff;
+        background-size: 100%;
+        background-position: 0 .15em;
+        text-shadow: none;
+      }
+      a:focus {
+        background: #042229;
+        color: #fff;
+        text-shadow: none;
+        outline: none;
+      }
+      h2 {
+        color: #042229;
+        font-size: 2.4rem;
+        padding: 2.5rem 0 0;
+      }
+      h2:first-of-type {
+        padding-top: 5rem;
+      }
 
-      <ul class="keywords keywords--introduction">
-        <li class="keyword">html</li>
-        <li class="keyword">css</li>
-        <li class="keyword">javascript</li>
-        <li class="keyword">jquery</li>
-        <li class="keyword">responsive</li>
-        <li class="keyword">mobile</li>
+      h2,
+      h3,
+      p:not(:last-child),
+      ul:not(:last-child),
+      address:not(:last-child) {
+        margin: 0 0 1.5rem;
+      }
+
+      .list-item {
+        color: #aaa;
+        margin: 0 0 1em 2rem;
+        list-style: square;
+      }
+      .list-item__title {
+        display: inline-block;
+        color: #666;
+      }
+      .list-item--experience__title {
+        display: block;
+      }
+      .list-item__link,
+      .list-item__sub-info {
+        margin: 0 0 0 .5em;
+      }
+      .list-item--experience__sub-info {
+        margin-left: 0;
+      }
+
+      .keywords::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      .keyword {
+        color: #999;
+        float: left;
+        list-style: none;
+      }
+      .keyword:not(:last-child)::after {
+        content: '/';
+        display: inline;
+        padding: 0 .5rem;
+        color: #ccc;
+      }
+
+      .legal {
+        display: block;
+        margin: 5rem 0 0;
+        font-size: 1.5rem;
+        color: #999;
+      }
+
+      @media screen and (max-width: 1280px) {
+        .title {
+          font-size: 4.5rem;
+        }
+        .list-item__sub-info {
+          display: block;
+          margin-left: 0;
+        }
+      }
+      @media screen and (max-width: 780px) {
+        .title {
+          font-size: 6vw;
+        }
+        .introduction {
+          padding-top: 2.5rem;
+          padding-bottom: 5rem;
+          margin-bottom: 0;
+          border-bottom: 1px dashed #ccc;
+        }
+        .content--main {
+          margin-top: 0;
+        }
+        .content--main::before,
+        .content--main::after {
+          height: 4rem;
+        }
+        .content--sub {
+          padding-top: 10vw;
+        }
+      }
+      @media screen and (max-width: 640px) {
+        .list-item__title {
+          display: block;
+        }
+        .list-item__link {
+          margin-left: 0;
+        }
+        .content--sub {
+          padding-top: 20vw;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .title {
+          bottom: 12.5vw;
+        }
+        .title__item--name {
+          font-size: 8vw;
+        }
+        .title__item--occupation {
+          font-size: 5vw;
+        }
+      }
+    </style>
+  </head>
+  <body itemscope itemtype="http://data-vocabulary.org/Person">
+
+    <picture class="bg">
+      <source srcset="/images/mg-1280.webp" media="(min-width: 641px)" type="image/webp">
+      <source srcset="/images/mg-640.webp" media="(max-width: 640px)" type="image/webp">
+      <source srcset="/images/mg-1280.jpg" media="(min-width: 641px)">
+      <source srcset="/images/mg-640.jpg" media="(max-width: 640px)">
+      <img class="bg__image" src="/images/mg-1280.jpg" alt="Michael Großklaus" width="1280" height="857">
+    </picture>
+
+    <h1 class="title">
+      <span class="title__item title__item--name" itemprop="name">Michael Großklaus</span><br>
+      <em class="title__item title__item--occupation">freelancing frontend-developer</em>
+    </h1>
+
+    <div class="content content--main">
+      <div class="introduction">
+        <p>Hi. I'm a <span itemprop="title">freelancing frontend-developer</span> from Hamburg, Germany.<br>
+        At the moment I am developing the <a href="https://www.xing.com/news">XING News</a> for my client <a href="http://www.njiuko.com">njiuko.com</a>.</p>
+
+        <ul class="keywords">
+          <li class="keyword">html</li>
+          <li class="keyword">css</li>
+          <li class="keyword">javascript</li>
+          <li class="keyword">responsive</li>
+          <li class="keyword">mobile</li>
+          <li class="keyword">performance</li>
+          <li class="keyword">usability</li>
+        </ul>
+      </div>
+
+      <h2>Current project</h2>
+      <ul>
+        <li class="list-item">
+          <h3 class="list-item__title">XING News</h3>
+          <a class="list-item__link" href="https://www.xing.com/news" target="_blank">xing.com/news</a>
+          <small class="list-item__sub-info">HTML / CSS / JS</small>
+        </li>
       </ul>
 
-    </section>
-
-    <section class="work">
-      <h2>Work</h2>
-
-      <h3>Current project</h3>
-      <ul class="projects">
-        <li class="project">
-          <h4>XING News</h4>
-          <p>
-            <a href="https://www.xing.com/news" target="_blank">xing.com/news</a>
-            <small>HTML / CSS / JS</small>
-          </p>
+      <h2>Recent projects</h2>
+      <ul>
+        <li class="list-item">
+          <h3 class="list-item__title">Louis Mobile</h3>
+          <a class="list-item__link" href="https://m.louis.de" target="_blank">m.louis.de</a>
+          <small class="list-item__sub-info">HTML / CSS / JS / frontend architecture &amp; development</small>
+        </li>
+        <li class="list-item">
+          <h3 class="list-item__title">Louis</h3>
+          <a class="list-item__link" href="https://www.louis.de" target="_blank">louis.de</a>
+          <small class="list-item__sub-info">HTML / CSS / JS / complete frontend architecture &amp; development</small>
+        </li>
+        <li class="list-item">
+          <h3 class="list-item__title">DEAR Photography</h3>
+          <a class="list-item__link" href="http://www.dearphotography.com" target="_blank">dearphotography.com</a>
+          <small class="list-item__sub-info">HTML / CSS / JS</small>
+        </li>
+        <li class="list-item">
+          <h3 class="list-item__title">finmar</h3>
+          <span class="list-item__link">finmar.com (offline)</span>
+          <small class="list-item__sub-info">HTML / CSS / JS</small>
+        </li>
+        <li class="list-item">
+          <h3 class="list-item__title">Erfahrungen.com</h3>
+          <a class="list-item__link" href="http://www.erfahrungen.com" target="_blank">erfahrungen.com</a>
+          <small class="list-item__sub-info">HTML / CSS / JS</small>
+        </li>
+        <li class="list-item">
+          <h3 class="list-item__title">Aparthotel Am Meer Cuxhaven, Duhnen</h3>
+          <a class="list-item__link" href="http://www.aparthotel-am-meer.de" target="_blank">aparthotel-am-meer.de</a>
+          <small class="list-item__sub-info">HTML / CSS / JS / CMS</small>
+        </li>
+        <li class="list-item">
+          <h3 class="list-item__title">Three-Headed Monkeys</h3>
+          <a class="list-item__link" href="http://www.threeheadedmonkeys.com" target="_blank">threeheadedmonkeys.com</a>
+          <small class="list-item__sub-info">HTML / CSS / JS / CMS</small>
+        </li>
+        <li class="list-item">
+          <h3 class="list-item__title">Gazelle Hamburg</h3>
+          <a class="list-item__link" href="http://www.gazelle-hamburg.de" target="_blank">gazelle-hamburg.de</a>
+          <small class="list-item__sub-info">HTML / CSS / JS</small>
+        </li>
+        <li class="list-item">
+          <h3 class="list-item__title">Brompton Store Hamburg</h3>
+          <a class="list-item__link" href="http://hamburg.brompton.de" target="_blank">hamburg.brompton.de</a>
+          <small class="list-item__sub-info">HTML / CSS / JS</small>
+        </li>
+        <li class="list-item">
+          <h3 class="list-item__title">Bewegungstraum</h3>
+          <a class="list-item__link" href="http://www.bewegungstraum.com" target="_blank">bewegungstraum.com</a>
+          <small class="list-item__sub-info">HTML / CSS / JS / CMS</small>
+        </li>
+        <li class="list-item">
+          <h3 class="list-item__title">Offensive: Bürokratieabbau</h3>
+          <span class="list-item__link">offensive-buerokratieabbau.de (offline)</span>
+          <small class="list-item__sub-info">Layout / HTML / CSS / CMS</small>
+        </li>
+        <li class="list-item">
+          <h3 class="list-item__title">CoSA Research Group</h3>
+          <a class="list-item__link" href="http://www.cosa.fh-luebeck.de" target="_blank">cosa.fh-luebeck.de</a>
+          <small class="list-item__sub-info">XHTML / CSS / CMS</small>
         </li>
       </ul>
 
-      <h3>Recent projects</h3>
-      <ul class="projects">
-        <li class="project">
-          <h4>Louis Mobile</h4>
-          <p>
-            <a href="https://m.louis.de" target="_blank">m.louis.de</a>
-            <small>HTML / CSS / JS / frontend architecture &amp; development</small>
-          </p>
+      <h2>Recent clients</h2>
+      <p>I mainly work on large projects, but due to contract conditions I'm not allowed to list all major projects.<br>
+      So here is a partial list of further clients.</p>
+      <ul>
+        <li class="list-item">
+          <h3 class="list-item__title">Njiuko</h3>
+          <a class="list-item__link" href="http://www.njiuko.com" target="_blank">njiuko.com</a>
         </li>
-        <li class="project">
-          <h4>Louis</h4>
-          <p>
-            <a href="https://www.louis.de" target="_blank">louis.de</a>
-            <small>HTML / CSS / JS / complete frontend architecture &amp; development</small>
-          </p>
+        <li class="list-item">
+          <h3 class="list-item__title">Louis Fun Company</h3>
+          <a class="list-item__link" href="https://www.louis.de" target="_blank">louis.de</a>
         </li>
-        <li class="project">
-          <h4>DEAR Photography</h4>
-          <p>
-            <a href="http://www.dearphotography.com" target="_blank">dearphotography.com</a>
-            <small>HTML / CSS / JS</small>
-          </p>
+        <li class="list-item">
+          <h3 class="list-item__title">Fork Unstable Media</h3>
+          <a class="list-item__link" href="http://www.fork.de" target="_blank">fork.de</a>
         </li>
-        <li class="project project--offline">
-          <h4>finmar</h4>
-          <p>
-            <a href="https://www.finmar.com" target="_blank">finmar.com</a>
-            <small>HTML / CSS / JS</small>
-          </p>
-        </li>
-        <li class="project">
-          <h4>Erfahrungen.com</h4>
-          <p>
-            <a href="http://www.erfahrungen.com" target="_blank">erfahrungen.com</a>
-            <small>HTML / CSS / JS</small>
-          </p>
-        </li>
-        <li class="project">
-          <h4>Aparthotel Am Meer Cuxhaven, Duhnen</h4>
-          <p>
-            <a href="http://www.aparthotel-am-meer.de" target="_blank">aparthotel-am-meer.de</a>
-            <small>HTML / CSS / JS / CMS</small>
-          </p>
-        </li>
-        <li class="project">
-          <h4>Three-Headed Monkeys</h4>
-          <p>
-            <a href="http://www.threeheadedmonkeys.com" target="_blank">threeheadedmonkeys.com</a>
-            <small>HTML / CSS / JS / CMS</small>
-          </p>
-        </li>
-        <li class="project">
-          <h4>Gazelle Hamburg</h4>
-          <p>
-            <a href="http://www.gazelle-hamburg.de" target="_blank">gazelle-hamburg.de</a>
-            <small>HTML / CSS / JS</small>
-          </p>
-        </li>
-        <li class="project">
-          <h4>Brompton Store Hamburg</h4>
-          <p>
-            <a href="http://hamburg.brompton.de" target="_blank">hamburg.brompton.de</a>
-            <small>HTML / CSS / JS</small>
-          </p>
-        </li>
-        <li class="project">
-          <h4>Bewegungstraum</h4>
-          <p>
-            <a href="http://www.bewegungstraum.com" target="_blank">bewegungstraum.com</a>
-            <small>HTML / CSS / JS / CMS</small>
-          </p>
-        </li>
-        <li class="project project--offline">
-          <h4>Offensive: Bürokratieabbau</h4>
-          <p>
-            offline: <a href="http://www.offensive-buerokratieabbau.de" target="_blank">offensive-buerokratieabbau.de</a>
-            <small>Layout / HTML / CSS / CMS</small>
-          </p>
-        </li>
-        <li class="project">
-          <h4>CoSA Research Group</h4>
-          <p>
-            <a href="http://www.cosa.fh-luebeck.de" target="_blank">cosa.fh-luebeck.de</a>
-            <small>XHTML / CSS / CMS</small>
-          </p>
+        <li class="list-item">
+          <h3 class="list-item__title">Planungsbüro für Internet &amp; Marketing</h3>
+          <a class="list-item__link" href="http://www.planungsbuero.eu" target="_blank">planungsbuero.eu</a>
         </li>
       </ul>
-
-      <h3>Recent clients</h3>
-      <p>
-        I mainly work on large projects, but due to contract conditions I'm not allowed to list all major projects.<br>
-        So here is a partial list of further clients.
-      </p>
-      <ul class="projects">
-        <li class="project">
-          <h4>Njiuko</h4>
-          <p><a href="http://www.njiuko.com" target="_blank">njiuko.com</a></p>
-        </li>
-        <li class="project">
-          <h4>Louis Fun Company</h4>
-          <p><a href="https://www.louis.de" target="_blank">louis.de</a></p>
-        </li>
-        <li class="project">
-          <h4>Fork Unstable Media</h4>
-          <p><a href="http://www.fork.de" target="_blank">fork.de</a></p>
-        </li>
-        <li class="project">
-          <h4>Planungsbüro für Internet &amp; Marketing</h4>
-          <p><a href="http://www.planungsbuero.eu" target="_blank">planungsbuero.eu</a></p>
-        </li>
-      </ul>
-    </section>
-
-    <section>
 
       <h2>Experience</h2>
       <ul>
-        <li>
-          <h4>freelancing frontend developer</h4>
-          <p><small>since 12/2011</small></p>
+        <li class="list-item list-item--experience">
+          <h3 class="list-item__title list-item--experience__title">freelancing frontend developer</h3>
+          <small class="list-item__sub-info list-item--experience__sub-info">since 12/2011</small>
         </li>
-        <li>
-          <h4>
-            graduated engineer for information technology and design<br>
-            <span>(fh lübeck, university of applied sciences)</span>
-          </h4>
-          <p><small>since 12/2011</small></p>
+        <li class="list-item list-item--experience">
+          <h3 class="list-item__title list-item--experience__title">graduated engineer for information technology and design<br>
+          (fh lübeck, university of applied sciences)</h3>
+          <small class="list-item__sub-info list-item--experience__sub-info">since 12/2011</small>
         </li>
-        <li>
-          <h4>web-developer / designer at <a target="_blank" href="http://www.evenmedia.de">evenmedia.de</a></h4>
-          <p><small>from 2008 - 2011</small></p>
+        <li class="list-item list-item--experience">
+          <h3 class="list-item__title list-item--experience__title">web-developer / designer at <a target="_blank" href="http://www.evenmedia.de">evenmedia.de</a></h3>
+          <small class="list-item__sub-info list-item--experience__sub-info">from 2008 - 2011</small>
         </li>
-        <li>
-          <h4>web-developer / designer at <a target="_blank" href="http://www.brandorange.de">brandorange.de</a></h4>
-          <p><small>from 2007 - 2008</small></p>
+        <li class="list-item list-item--experience">
+          <h3 class="list-item__title list-item--experience__title">web-developer / designer at <a target="_blank" href="http://www.brandorange.de">brandorange.de</a></h3>
+          <small class="list-item__sub-info list-item--experience__sub-info">from 2007 - 2008</small>
         </li>
       </ul>
+    </div>
 
-    </section>
+    <div class="content content--sub contact">
+      <ul class="keywords">
+        <li class="keyword">
+          <a target="_blank" href="https://www.xing.com/profile/Michael_Grossklaus" title="view my xing profile">xing</a>
+        </li>
+        <li class="keyword">
+          <a target="_blank" href="https://www.twitter.com/mgrossklaus" title="view my twitter profile">twitter</a>
+        </li>
+        <li class="keyword">
+          <a href="https://github.com/mgrossklaus" target="_blank" title="view my github profile">github</a>
+        </li>
+      </ul>
+      <p><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;">&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;</a> (GPG Fingerprint: D280 DBED E8CB F799 0D04 E32B 0CCC 38E4 E0DA 8EE3)</p>
 
-    <section class="contact">
-      <h2>Contact</h2>
-
-      <div class="contact__type">
-        <h3>Online</h3>
-        <ul class="keywords">
-          <li class="keyword"><a target="_blank" href="https://www.xing.com/profile/Michael_Grossklaus" title="view my xing profile">xing</a></li>
-          <li class="keyword"><a target="_blank" href="https://www.twitter.com/mgrossklaus" title="view my twitter profile">twitter</a></li>
-          <li class="keyword"><a href="https://github.com/mgrossklaus" target="_blank" title="view my github profile">github</a></li>
-        </ul>
-        <p>
-          <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;">&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;</a> (GPG Fingerprint: D280 DBED E8CB F799 0D04 E32B 0CCC 38E4 E0DA 8EE3)
-        </p>
-      </div>
-
-      <div class="contact__type">
-        <h3>Offline</h3>
+      <div class="legal">
         <address itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
           Michael Großklaus / <span itemprop="street-address">Scheideweg 6</span> / <span itemprop="postal-code">20253</span> <span itemprop="city">Hamburg</span>, <span itemprop="country-name">Germany</span>
         </address>
-        <p class="legal">
-          <small>
-            USt.-Id.-Nr.: DE279812974 / Finanzamt Hamburg-Hansa
-          </small>
-        </p>
+        <p>USt.-Id.-Nr.: DE279812974 / Finanzamt Hamburg-Hansa</p>
       </div>
-    </section>
-  </div>
-  </div>
-  <script>
-    /*!
-    loadCSS: load a CSS file asynchronously.
-    [c]2014 @scottjehl, Filament Group, Inc.
-    Licensed MIT
-    */
-    var cssArr  = ['/css/styles.css'],
-        cssArrL = cssArr.length,
-        ssArr,
-        i;
-
-    for(i = 0; i < cssArrL; i++) {
-      var ss = window.document.createElement('link');
-      ss.rel = "stylesheet";
-      ss.className = "lazy-css";
-      ss.href = cssArr[i];
-      // temporarily, set media to something non-matching to ensure it'll fetch without blocking render
-      ss.media = "only x";
-      // inject link
-      document.getElementsByTagName('head')[0].appendChild( ss );
-      // set media back to `all` so that the styleshet applies once it loads
-    }
-
-    ssArr = document.querySelectorAll('.lazy-css');
-
-    setTimeout( function(){
-      for(i = 0; i < cssArrL; i++) {
-        ssArr[i].media = "all";
-      }
-    });
-  </script>
-  <noscript>
-    <link rel="stylesheet" href="/css/styles.min.css">
-  </noscript>
-</body>
+    </div>
+  </body>
 </html>
