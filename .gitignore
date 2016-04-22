@@ -3,3 +3,5 @@ makefile
 node_modules/
 gulpfile.js
 dist/
+package.json
+
