@@ -283,14 +283,14 @@
       }
     </style>
   </head>
-  <body itemscope itemtype="http://data-vocabulary.org/Person">
+  <body itemscope itemtype="http://schema.org/Person">
 
     <picture class="bg" id="bg">
       <source srcset="/images/mg-1280.webp" media="(min-width: 641px)" type="image/webp">
       <source srcset="/images/mg-640.webp" media="(max-width: 640px)" type="image/webp">
       <source srcset="/images/mg-1280.jpg" media="(min-width: 641px)">
       <source srcset="/images/mg-640.jpg" media="(max-width: 640px)">
-      <img class="bg__image" src="/images/mg-1280.jpg" alt="Michael Großklaus" width="1280" height="857">
+      <img itemprop="image" class="bg__image" src="/images/mg-1280.jpg" alt="Michael Großklaus" width="1280" height="857">
     </picture>
 
     <h1 class="title">
@@ -300,7 +300,7 @@
 
     <div class="content content--main">
       <div class="introduction">
-        <p>Hi. I'm a <span itemprop="title">freelancing frontend-developer</span> from Hamburg, Germany.<br>
+        <p>Hi. I'm a <span itemprop="jobTitle">freelancing frontend-developer</span> from Hamburg, Germany.<br>
         At the moment I am developing the <a href="https://www.xing.com/news">XING News</a> for my client <a href="http://www.njiuko.com">njiuko.com</a>.</p>
 
         <ul class="keywords">
@@ -438,11 +438,11 @@
           <a href="https://github.com/mgrossklaus" target="_blank" title="view my github profile">github</a>
         </li>
       </ul>
-      <p><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;">&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;</a> (GPG Fingerprint: D280 DBED E8CB F799 0D04 E32B 0CCC 38E4 E0DA 8EE3)</p>
+      <p><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;"><span itemprop="email">&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;</span></a> (GPG Fingerprint: D280 DBED E8CB F799 0D04 E32B 0CCC 38E4 E0DA 8EE3)</p>
 
       <div class="legal">
-        <address itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
-          Michael Großklaus / <span itemprop="street-address">Scheideweg 6</span> / <span itemprop="postal-code">20253</span> <span itemprop="city">Hamburg</span>, <span itemprop="country-name">Germany</span>
+        <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+          Michael Großklaus / <span itemprop="streetAddress">Scheideweg 6</span> / <span itemprop="postalCode">20253</span> <span itemprop="addressLocality">Hamburg</span>, <span itemprop="addressCountry">Germany</span>
         </address>
         <p>USt.-Id.-Nr.: DE279812974 / Finanzamt Hamburg-Hansa</p>
       </div>
