@@ -457,6 +457,10 @@
       }
 
       window.addEventListener('scroll', onScroll, false);
+
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js');
+      }
     </script>
   </body>
 </html>
