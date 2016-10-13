@@ -232,6 +232,17 @@
         color: #999;
       }
 
+      .offline {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        color: #fff;
+        background: #85134e;
+        text-align: center;
+        padding: .5rem;
+      }
+
       @media screen and (max-width: 1280px) {
         .title {
           font-size: 4.5rem;
@@ -287,6 +298,10 @@
     </style>
   </head>
   <body itemscope itemtype="http://schema.org/Person">
+
+    <?php if (!$online) { ?>
+      <p class="offline">It looks like you're offline, so what you see might not be up to date.</p>
+    <?php } ?>
 
     <picture class="bg" id="bg">
       <source srcset="/images/mg-1400.webp" media="(min-width: 641px)" type="image/webp">
@@ -455,9 +470,11 @@
 
       window.addEventListener('scroll', onScroll, false);
 
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js');
-      }
+      <?php if ($online) { ?>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/sw.js');
+        }
+      <?php } ?>
     </script>
   </body>
 </html>
