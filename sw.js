@@ -1,14 +1,12 @@
 'use strict';
 
-const CACHE_VERSION = 5,
+const CACHE_VERSION = 20,
       CACHE_NAME    = 'mgrsskls',
       CURRENT_CACHE = CACHE_NAME + '-v' + CACHE_VERSION,
       URLS_TO_CACHE = [
         '/offline.html',
-        '/images/mg-1400.jpg',
-        '/images/mg-1400.webp',
-        '/images/mg-640.jpg',
-        '/images/mg-640.webp',
+        '/images/me.jpg',
+        '/images/me.webp'
       ];
 
 self.addEventListener('install', event => {
