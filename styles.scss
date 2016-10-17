@@ -285,7 +285,7 @@ address {
   }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 78rem) {
   .title {
     font-size: 6vw;
   }
@@ -304,7 +304,7 @@ address {
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 64rem) {
   .section:not(:first-child) {
     padding: 6rem 0;
   }
@@ -318,7 +318,7 @@ address {
   }
 }
 
-@media screen and (max-width: 640px) and (orientation: portrait) {
+@media screen and (max-width: 64rem) and (orientation: portrait) {
   .title {
     bottom: 50%;
     transform: translateY(50%);
@@ -340,7 +340,7 @@ address {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 48rem) {
   .title__item--name {
     font-size: 8vw;
   }
