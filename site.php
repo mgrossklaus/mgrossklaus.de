@@ -58,7 +58,7 @@
               <img itemprop="image" src="/images/me.jpg" alt="Michael Großklaus" width="300" height="300">
             </picture>
 
-            <p>Hi. I'm a <span itemprop="jobTitle">freelancing frontend-developer</span> from <a href="https://www.google.de/maps/place/Hamburg/@53.5582447,9.647645" target="_blank" rel="noopener">Hamburg</a>, Germany.</p>
+            <p>Hi. I'm a <span itemprop="jobTitle">freelancing frontend-developer</span> from <a href="https://www.google.de/maps/place/Hamburg/@53.5582447,9.647645" target="_blank" rel="noopener">Hamburg</a>, Germany, and developer of the <a href="https://www.kickerfinder.de" target="_blank" rel="noopener">kickerfinder</a>.</p>
 
             <ul class="keywords">
               <li class="keyword">html</li>
@@ -83,23 +83,38 @@
 
         <div class="section">
           <div class="section__inner">
-            <h2>Recent projects</h2>
+            <h2>Own projects</h2>
             <ul>
               <li class="list-item">
-                <h3 class="list-item__title list-item--project__title">XING News</h3>
+                <h3 class="list-item__title list-item--project__title"><a rel="noopener" class="list-item__link" href="https://www.kickerfinder.de" target="_blank">kickerfinder.de</a></h3>
+              </li>
+            </ul>
+
+            <h2>Recent clients &amp; projects</h2>
+            <ul>
+              <li class="list-item">
+                <h3 class="list-item__title list-item--project__title">XING AG</h3>
                 <a rel="noopener" class="list-item__link" href="https://www.xing.com/news" target="_blank">xing.com/news</a>
               </li>
               <li class="list-item">
-                <h3 class="list-item__title list-item--project__title">Louis Mobile</h3>
-                <a rel="noopener" class="list-item__link" href="https://m.louis.de" target="_blank">m.louis.de</a>
+                <h3 class="list-item__title list-item--project__title">Louis</h3>
+                <a rel="noopener" class="list-item__link" href="https://www.louis.de" target="_blank">louis.de</a> / <a rel="noopener" class="list-item__link" href="https://m.louis.de" target="_blank">m.louis.de</a>
               </li>
               <li class="list-item">
-                <h3 class="list-item__title list-item--project__title">Louis</h3>
-                <a rel="noopener" class="list-item__link" href="https://www.louis.de" target="_blank">louis.de</a>
+                <h3 class="list-item__title list-item--project__title">Njiuko</h3>
+                <a rel="noopener" class="list-item__link" href="http://www.njiuko.com" target="_blank">njiuko.com</a>
+              </li>
+              <li class="list-item">
+                <h3 class="list-item__title list-item--project__title">Fork Unstable Media</h3>
+                <a rel="noopener" class="list-item__link" href="http://www.fork.de" target="_blank">fork.de</a>
               </li>
               <li class="list-item">
                 <h3 class="list-item__title list-item--project__title">DEAR Photography</h3>
                 <a rel="noopener" class="list-item__link" href="http://www.dearphotography.com" target="_blank">dearphotography.com</a>
+              </li>
+              <li class="list-item">
+                <h3 class="list-item__title list-item--project__title">Planungsbüro für Internet &amp; Marketing</h3>
+                <a rel="noopener" class="list-item__link" href="http://www.planungsbuero.eu" target="_blank">planungsbuero.eu</a>
               </li>
               <li class="list-item">
                 <h3 class="list-item__title list-item--project__title">Erfahrungen.com</h3>
@@ -108,34 +123,6 @@
               <li class="list-item">
                 <h3 class="list-item__title list-item--project__title">Aparthotel Am Meer Cuxhaven</h3>
                 <a rel="noopener" class="list-item__link" href="http://www.aparthotel-am-meer.de" target="_blank">aparthotel-am-meer.de</a>
-              </li>
-            </ul>
-
-            <h2>Recent clients</h2>
-            <p>
-              Due to contract conditions I'm not allowed to list all major projects.<br>
-              So here is a partial list of further clients.
-            </p>
-            <ul>
-              <li class="list-item">
-                <h3 class="list-item__title list-item--project__title">XING AG</h3>
-                <a rel="noopener" class="list-item__link" href="http://www.xing.com" target="_blank">xing.com</a>
-              </li>
-              <li class="list-item">
-                <h3 class="list-item__title list-item--project__title">Njiuko</h3>
-                <a rel="noopener" class="list-item__link" href="http://www.njiuko.com" target="_blank">njiuko.com</a>
-              </li>
-              <li class="list-item">
-                <h3 class="list-item__title list-item--project__title">Louis Fun Company</h3>
-                <a rel="noopener" class="list-item__link" href="https://www.louis.de" target="_blank">louis.de</a>
-              </li>
-              <li class="list-item">
-                <h3 class="list-item__title list-item--project__title">Fork Unstable Media</h3>
-                <a rel="noopener" class="list-item__link" href="http://www.fork.de" target="_blank">fork.de</a>
-              </li>
-              <li class="list-item">
-                <h3 class="list-item__title list-item--project__title">Planungsbüro für Internet &amp; Marketing</h3>
-                <a rel="noopener" class="list-item__link" href="http://www.planungsbuero.eu" target="_blank">planungsbuero.eu</a>
               </li>
             </ul>
           </div>
