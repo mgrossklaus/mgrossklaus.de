@@ -86,43 +86,47 @@
             <h2>Own projects</h2>
             <ul>
               <li class="list-item">
-                <h3 class="list-item__title list-item--project__title"><a rel="noopener" class="list-item__link" href="https://www.kickerfinder.de" target="_blank">kickerfinder.de</a></h3>
+                <span class="list-item__title list-item--project__title"><a rel="noopener" class="list-item__link" href="https://www.kickerfinder.de" target="_blank">kickerfinder.de</a></span>
               </li>
             </ul>
 
-            <h2>Recent clients &amp; projects</h2>
+            <h2>Recent work</h2>
             <ul>
               <li class="list-item">
-                <h3 class="list-item__title list-item--project__title">XING AG</h3>
+                <span class="list-item__title list-item--project__title">XING AG</span>
                 <a rel="noopener" class="list-item__link" href="https://www.xing.com/news" target="_blank">xing.com/news</a>
               </li>
               <li class="list-item">
-                <h3 class="list-item__title list-item--project__title">Louis</h3>
+                <span class="list-item__title list-item--project__title">Louis</span>
                 <a rel="noopener" class="list-item__link" href="https://www.louis.de" target="_blank">louis.de</a> / <a rel="noopener" class="list-item__link" href="https://m.louis.de" target="_blank">m.louis.de</a>
               </li>
               <li class="list-item">
-                <h3 class="list-item__title list-item--project__title">Njiuko</h3>
-                <a rel="noopener" class="list-item__link" href="http://www.njiuko.com" target="_blank">njiuko.com</a>
-              </li>
-              <li class="list-item">
-                <h3 class="list-item__title list-item--project__title">Fork Unstable Media</h3>
-                <a rel="noopener" class="list-item__link" href="http://www.fork.de" target="_blank">fork.de</a>
-              </li>
-              <li class="list-item">
-                <h3 class="list-item__title list-item--project__title">DEAR Photography</h3>
+                <span class="list-item__title list-item--project__title">DEAR Photography</span>
                 <a rel="noopener" class="list-item__link" href="http://www.dearphotography.com" target="_blank">dearphotography.com</a>
               </li>
               <li class="list-item">
-                <h3 class="list-item__title list-item--project__title">Planungsbüro für Internet &amp; Marketing</h3>
-                <a rel="noopener" class="list-item__link" href="http://www.planungsbuero.eu" target="_blank">planungsbuero.eu</a>
+                <span class="list-item__title list-item--project__title">Aparthotel Am Meer Cuxhaven</span>
+                <a rel="noopener" class="list-item__link" href="http://www.aparthotel-am-meer.de" target="_blank">aparthotel-am-meer.de</a>
               </li>
               <li class="list-item">
-                <h3 class="list-item__title list-item--project__title">Erfahrungen.com</h3>
+                <span class="list-item__title list-item--project__title">Erfahrungen.com</span>
                 <a rel="noopener" class="list-item__link" href="http://www.erfahrungen.com" target="_blank">erfahrungen.com</a>
               </li>
+            </ul>
+
+            <h3>Various projects</h3>
+            <ul>
               <li class="list-item">
-                <h3 class="list-item__title list-item--project__title">Aparthotel Am Meer Cuxhaven</h3>
-                <a rel="noopener" class="list-item__link" href="http://www.aparthotel-am-meer.de" target="_blank">aparthotel-am-meer.de</a>
+                <a rel="noopener" class="list-item__link" href="http://nerdindustries.com/" target="_blank">Nerd Industries</a>
+              </li>
+              <li class="list-item">
+                <a rel="noopener" class="list-item__link" href="http://www.njiuko.com" target="_blank">Njiuko</a>
+              </li>
+              <li class="list-item">
+                <a rel="noopener" class="list-item__link" href="http://www.fork.de" target="_blank">Fork Unstable Media</a>
+              </li>
+              <li class="list-item">
+                <a rel="noopener" class="list-item__link" href="https://planungsbuero.de" target="_blank">pbi planungsbüro INTERNET</a>
               </li>
             </ul>
           </div>
@@ -130,20 +134,20 @@
             <h2>Experience</h2>
             <ul>
               <li class="list-item">
-                <h3 class="list-item__title">freelancing frontend developer</h3>
+                <span class="list-item__title">freelancing frontend developer</span>
                 <small class="list-item__sub-info">since 12/2011</small>
               </li>
               <li class="list-item">
-                <h3 class="list-item__title">graduated engineer for information technology and design<br>
-                (fh lübeck, university of applied sciences)</h3>
+                <span class="list-item__title">graduated engineer for information technology and design<br>
+                (fh lübeck, university of applied sciences)</span>
                 <small class="list-item__sub-info">since 12/2011</small>
               </li>
               <li class="list-item">
-                <h3 class="list-item__title">web-developer / designer at <a rel="noopener" target="_blank" href="http://www.evenmedia.de">evenmedia.de</a></h3>
+                <span class="list-item__title">web-developer / designer at <a rel="noopener" target="_blank" href="http://www.evenmedia.de">evenmedia.de</a></span>
                 <small class="list-item__sub-info">from 2008 - 2011</small>
               </li>
               <li class="list-item">
-                <h3 class="list-item__title">web-developer / designer at <a rel="noopener" target="_blank" href="http://www.brandorange.de">brandorange.de</a></h3>
+                <span class="list-item__title">web-developer / designer at <a rel="noopener" target="_blank" href="http://www.brandorange.de">brandorange.de</a></span>
                 <small class="list-item__sub-info">from 2007 - 2008</small>
               </li>
             </ul>
@@ -156,8 +160,10 @@
               <li class="keyword">
                 <a rel="noopener" target="_blank" href="https://www.twitter.com/mgrossklaus" title="view my twitter profile">twitter</a>
               </li>
+              <li class="keyword">
+                <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;"><span itemprop="email">&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;</span></a>
+              </li>
             </ul>
-            <p><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;"><span itemprop="email">&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;</span></a> (GPG Fingerprint: D280 DBED E8CB F799 0D04 E32B 0CCC 38E4 E0DA 8EE3)</p>
 
             <div class="legal">
               <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">

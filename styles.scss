@@ -170,6 +170,12 @@ h2 {
   }
 }
 
+h3 {
+  font-size: 1.8rem;
+  color: $blue;
+  padding: 1em 0 1em 1em;
+}
+
 h2,
 p,
 ul,
@@ -219,13 +225,13 @@ address {
   }
 }
 
+.list-item__title {
+  display: block;
+}
+
 .list-item--project__title {
   display: inline-block;
   padding: 0 .5em 0 0;
-}
-
-.list-item__link {
-  margin: 0 .5em 0 0;
 }
 
 .keywords::after {
@@ -249,7 +255,7 @@ address {
 
 .legal {
   display: block;
-  margin: 6rem 0 0;
+  margin: 8rem 0 0;
   font-size: 1.4rem;
   color: $lightGrey;
 }
