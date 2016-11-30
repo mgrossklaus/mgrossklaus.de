@@ -114,7 +114,7 @@
               </li>
             </ul>
 
-            <h3>Various projects</h3>
+            <h3>Various projects for...</h3>
             <ul>
               <li class="list-item">
                 <a rel="noopener" class="list-item__link" href="http://nerdindustries.com/" target="_blank">Nerd Industries</a>
