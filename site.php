@@ -7,6 +7,11 @@
     <meta name="viewport" content="initial-scale=1, width=device-width">
     <link rel="canonical" href="https://www.mgrossklaus.de/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#740740">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+    <meta name="apple-mobile-web-app-title" content="kickerfinder">
 
     <style>
       <?php
@@ -54,8 +59,8 @@
         <div class="section">
           <div class="section__inner section__inner--introduction">
             <picture class="me">
-              <source srcset="/images/me.webp" type="image/webp">
-              <img itemprop="image" src="/images/me.jpg" alt="Michael Großklaus" width="300" height="300">
+              <source srcset="images/me.webp" type="image/webp">
+              <img itemprop="image" src="images/me.jpg" alt="Michael Großklaus" width="300" height="300">
             </picture>
 
             <p>Hi. I'm a <span itemprop="jobTitle">freelancing frontend-developer</span> from <a href="https://www.google.de/maps/place/Hamburg/@53.5582447,9.647645" target="_blank" rel="noopener">Hamburg</a>, Germany, and developer of the <a href="https://www.kickerfinder.de" target="_blank" rel="noopener">kickerfinder</a>.</p>
@@ -116,6 +121,9 @@
 
             <h3>Various projects for...</h3>
             <ul>
+              <li class="list-item">
+                <a rel="noopener" class="list-item__link" href="https://lifetime.eu/" target="_blank">LifeTime / connected-health.eu GmbH</a>
+              </li>
               <li class="list-item">
                 <a rel="noopener" class="list-item__link" href="http://nerdindustries.com/" target="_blank">Nerd Industries</a>
               </li>

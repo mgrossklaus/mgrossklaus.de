@@ -4,5 +4,6 @@ node_modules/
 gulpfile.js
 dist/
 package.json
-*.html
+/*.html
 styles.css
+sftp-config.json
