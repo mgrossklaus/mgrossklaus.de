@@ -5,13 +5,13 @@
     <title>Michael Großklaus - Freelancing frontend-developer Hamburg</title>
     <meta name="description" content="I'm a freelancing frontend-developer based in Hamburg, Germany. You can hire me for HTML, CSS and JavaScript jobs.">
     <meta name="viewport" content="initial-scale=1, width=device-width">
-    <link rel="canonical" href="https://www.mgrossklaus.de/">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta name="theme-color" content="#740740">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="manifest.json">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
-    <meta name="apple-mobile-web-app-title" content="kickerfinder">
+    <meta name="apple-mobile-web-app-title" content="mgrossklaus">
+    <meta name="referrer" content="no-referrer">
 
     <style>
       <?php
@@ -87,14 +87,11 @@
         </div>
 
         <div class="section">
-          <div class="section__inner">
-            <h2>Own projects</h2>
-            <ul>
-              <li class="list-item">
-                <span class="list-item__title list-item--project__title"><a rel="noopener" class="list-item__link" href="https://www.kickerfinder.de" target="_blank">kickerfinder.de</a></span>
-              </li>
-            </ul>
+          <blockquote class="testimonial">“Working with Michael Großklaus was an all around pleasurable experience: Fast turnaround, attention to detail and being open to suggestions and changes translated into an efficient completion of the website for my client. I’m hoping to send another project his way soon.” <small class="testimonial__author">Michael Koritschan &ndash; <a href="http://www.studio-koritschan.com/" rel="noopener" target="_blank">Studio Koritschan</a></small></blockquote>
+        </div>
 
+        <div class="section">
+          <div class="section__inner">
             <h2>Recent work</h2>
             <ul>
               <li class="list-item">
@@ -122,6 +119,9 @@
             <h3>Various projects for...</h3>
             <ul>
               <li class="list-item">
+                <a rel="noopener" class="list-item__link" href="https://www.factorial.io/" target="_blank">Factorial</a>
+              </li>
+              <li class="list-item">
                 <a rel="noopener" class="list-item__link" href="https://lifetime.eu/" target="_blank">LifeTime / connected-health.eu GmbH</a>
               </li>
               <li class="list-item">
@@ -139,6 +139,13 @@
             </ul>
           </div>
           <div class="section__inner">
+            <h2>Own projects</h2>
+            <ul>
+              <li class="list-item">
+                <span class="list-item__title list-item--project__title"><a rel="noopener" class="list-item__link" href="https://www.kickerfinder.de" target="_blank">kickerfinder.de</a></span>
+              </li>
+            </ul>
+
             <h2>Experience</h2>
             <ul>
               <li class="list-item">
@@ -172,19 +179,19 @@
                 <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;"><span itemprop="email">&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;</span></a>
               </li>
             </ul>
-
-            <div class="legal">
-              <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                Michael Großklaus / <span itemprop="streetAddress">Scheideweg 6</span> / <span itemprop="postalCode">20253</span> <span itemprop="addressLocality">Hamburg</span>, <span itemprop="addressCountry">Germany</span>
-              </address>
-              <p>USt.-Id.-Nr.: DE279812974 / Finanzamt Hamburg-Hansa</p>
-            </div>
           </div>
         </div>
 
         <div class="section cta">
           <p>You want to hire me?</p>
           <a class="button" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;">Send me an E-Mail</a>
+        </div>
+
+        <div class="section legal">
+          <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            Michael Großklaus / <span itemprop="streetAddress">Christian-Förster-Straße 11</span> / <span itemprop="postalCode">20253</span> <span itemprop="addressLocality">Hamburg</span>, <span itemprop="addressCountry">Germany</span>
+          </address>
+          <p>USt.-Id.-Nr.: DE279812974 / Finanzamt Hamburg-Hansa</p>
         </div>
       </div>
     </div>
