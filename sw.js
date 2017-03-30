@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_VERSION = 38,
+const CACHE_VERSION = 40,
       CACHE_NAME    = 'mgrsskls',
       CURRENT_CACHE = CACHE_NAME + '-v' + CACHE_VERSION,
       URLS_TO_CACHE = [

@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Michael Großklaus - Freelancing frontend-developer Hamburg</title>
-    <meta name="description" content="I'm a freelancing frontend-developer based in Hamburg, Germany. You can hire me for HTML, CSS and JavaScript jobs.">
+    <title>Michael Großklaus - Freelance frontend-developer Hamburg</title>
+    <meta name="description" content="Michael Großklaus is a freelance frontend-developer based in Hamburg, Germany. You can hire him for HTML, CSS and JavaScript jobs.">
     <meta name="viewport" content="initial-scale=1, width=device-width">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta name="theme-color" content="#740740">
@@ -12,6 +12,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
     <meta name="apple-mobile-web-app-title" content="mgrossklaus">
     <meta name="referrer" content="no-referrer">
+    <link rel="canonical" href="https://www.mgrossklaus.de">
 
     <style>
       <?php
@@ -47,12 +48,12 @@
       </svg>
     </div>
 
-    <div class="container container--title">
+    <header class="container container--title">
       <h1 class="title">
         <span class="title__item title__item--name" itemprop="name">Michael Großklaus</span><br>
-        <em class="title__item title__item--occupation">freelancing frontend-developer</em>
+        <em class="title__item title__item--occupation">freelance frontend-developer</em>
       </h1>
-    </div>
+    </header>
 
     <div class="content">
       <div class="container">
@@ -60,10 +61,10 @@
           <div class="section__inner section__inner--introduction">
             <picture class="me">
               <source srcset="images/me.webp" type="image/webp">
-              <img itemprop="image" src="images/me.jpg" alt="Michael Großklaus" width="300" height="300">
+              <img itemprop="image" src="images/me.jpg" alt="Photo of Michael Großklaus" title="Michael Großklaus" width="300" height="300">
             </picture>
 
-            <p>Hi. I'm a <span itemprop="jobTitle">freelancing frontend-developer</span> from <a href="https://www.google.de/maps/place/Hamburg/@53.5582447,9.647645" target="_blank" rel="noopener">Hamburg</a>, Germany, and developer of the <a href="https://www.kickerfinder.de" target="_blank" rel="noopener">kickerfinder</a>.</p>
+            <p>Hi. I'm a <strong itemprop="jobTitle">freelance frontend-developer</strong> from <a href="https://www.google.de/maps/place/Hamburg/@53.5582447,9.647645" target="_blank" rel="noopener">Hamburg</a>, Germany, and developer of the <a href="https://www.kickerfinder.de" target="_blank" rel="noopener" title="The kickerfinder helps you to find bars with foosball tables near you.">kickerfinder</a>.</p>
 
             <ul class="keywords">
               <li class="keyword">html</li>
@@ -149,7 +150,7 @@
             <h2>Experience</h2>
             <ul>
               <li class="list-item">
-                <span class="list-item__title">freelancing frontend developer</span>
+                <span class="list-item__title">freelance frontend developer</span>
                 <small class="list-item__sub-info">since 12/2011</small>
               </li>
               <li class="list-item">
@@ -182,17 +183,17 @@
           </div>
         </div>
 
-        <div class="section cta">
+        <aside class="section cta">
           <p>You want to hire me?</p>
           <a class="button" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#x69;&#108;&#x40;&#x6D;&#x67;&#x72;&#111;&#x73;&#x73;&#107;&#x6C;&#97;&#117;&#115;&#46;&#100;&#x65;">Send me an E-Mail</a>
-        </div>
+        </aside>
 
-        <div class="section legal">
+        <footer class="section legal">
           <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
             Michael Großklaus / <span itemprop="streetAddress">Christian-Förster-Straße 11</span> / <span itemprop="postalCode">20253</span> <span itemprop="addressLocality">Hamburg</span>, <span itemprop="addressCountry">Germany</span>
           </address>
           <p>USt.-Id.-Nr.: DE279812974 / Finanzamt Hamburg-Hansa</p>
-        </div>
+        </footer>
       </div>
     </div>
 
