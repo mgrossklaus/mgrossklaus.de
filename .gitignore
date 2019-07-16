@@ -1,9 +1,4 @@
 .DS_Store
-makefile
 node_modules/
-gulpfile.js
 dist/
-package.json
-/*.html
-styles.css
 sftp-config.json
